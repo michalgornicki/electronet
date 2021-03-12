@@ -1,0 +1,22 @@
+[{
+    "id": "1",
+    "title": "Plecak Badger Outdoor Recon",
+    "availability": "Dostępny",
+    "image": "1.png",
+    "score": 5
+  },
+  {
+    "id": "2",
+    "title": "Plecak Badger Outdoor Recon",
+    "availability": "Brak w magazynie",
+    "image": "2.png",
+    "score": 3
+  },
+  {
+    "id": "3",
+    "title": "Plecak Badger Outdoor Recon",
+    "availability": "Dostępny",
+    "image": "3.png",
+    "score": 4
+  }
+]

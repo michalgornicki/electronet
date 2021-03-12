@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.item{
+  background-color: rgb(230, 230, 230);
+  width: 25%;
+}
+
+.item-image{
+  width: 25%;
+}

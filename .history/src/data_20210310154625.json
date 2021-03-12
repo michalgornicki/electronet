@@ -1,0 +1,387 @@
+[{
+    "id": "1",
+    "title": "Pamięć RAM Kingston 8GB 2666MHz",
+    "availability": "Dostępny",
+    "price": "129,99 zł",
+    "image": "1.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "2",
+    "title": "Dysk SSD Goodram 500GB",
+    "availability": "Kilka sztuk",
+    "price": "219,99 zł",
+    "image": "2.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "3",
+    "title": "Gigabyte GeForce GTX 1660 SUPER",
+    "availability": "Dostępny",
+    "price": "1749,99 zł",
+    "image": "3.jpg",
+    "category": "graphic"
+  },
+  {
+    "id": "4",
+    "title": "Klawiatura mechaniczna Razer VX",
+    "availability": "Dostępny",
+    "price": "389,99 zł",
+    "image": "4.jpg",
+    "category": "accesories"
+  },
+  {
+    "id": "5",
+    "title": "Monitor HP 27 4K True Bright",
+    "availability": "Dostępny",
+    "price": "1100,00 zł",
+    "image": "5.jpg",
+    "category": "monitors"
+  },
+  {
+    "id": "6",
+    "title": "Słuchawki Panasonic HD Bluetooth",
+    "availability": "Dostępny",
+    "price": "180,99 zł",
+    "image": "6.jpg",
+    "category": "sound"
+  },
+  {
+    "id": "7",
+    "title": "Głośniki Genius 4.1 ULTRA SOUND",
+    "availability": "Dostępny",
+    "price": "111,99 zł",
+    "image": "7.jpg",
+    "category": "sound"
+  },
+  {
+    "id": "8",
+    "title": "Laptop Huawei, SSD 500GB, VEGA 8",
+    "availability": "Dostępny",
+    "price": "2249,99 zł",
+    "image": "8.jpg",
+    "category": "laptops"
+  },
+  {
+    "id": "9",
+    "title": "Pamięć RAM Kingston 4GB 2666MHz",
+    "availability": "Dostępny",
+    "price": "89,99 zł",
+    "image": "1.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "10",
+    "title": "Pamięć RAM Kingston 4GB 2333MHz",
+    "availability": "Kilka sztuk",
+    "price": "79,99 zł",
+    "image": "1.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "11",
+    "title": "Gigabyte GeForce GTX 2080",
+    "availability": "Dostępny",
+    "price": "2149,99 zł",
+    "image": "3.jpg",
+    "category": "graphic"
+  },
+  {
+    "id": "12",
+    "title": "Radeon RX690",
+    "availability": "Dostępny",
+    "price": "1789,99 zł",
+    "image": "3.jpg",
+    "category": "graphic"
+  },
+  {
+    "id": "13",
+    "title": "Monitor HP 31 FULL HD True Bright",
+    "availability": "Dostępny",
+    "price": "1100,00 zł",
+    "image": "5.jpg",
+    "category": "monitors"
+  },
+  {
+    "id": "14",
+    "title": "Słuchawki Panasonic HD Cable",
+    "availability": "Dostępny",
+    "price": "109,99 zł",
+    "image": "6.jpg",
+    "category": "sound"
+  },
+  {
+    "id": "15",
+    "title": "Głośniki Genius 4.1 ULTRA SOUND 4.1",
+    "availability": "Dostępny",
+    "price": "181,99 zł",
+    "image": "7.jpg",
+    "category": "sound"
+  },
+  {
+    "id": "16",
+    "title": "Laptop Huawei, SSD 1TB, VEGA 8",
+    "availability": "Dostępny",
+    "price": "2749,99 zł",
+    "image": "8.jpg",
+    "category": "laptops"
+  },
+  {
+    "id": "17",
+    "title": "Pamięć RAM Kingston 1GB 2666MHz",
+    "availability": "Dostępny",
+    "price": "39,99 zł",
+    "image": "1.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "18",
+    "title": "Dysk SSD Goodram 500GB",
+    "availability": "Kilka sztuk",
+    "price": "219,99 zł",
+    "image": "2.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "19",
+    "title": "Gigabyte GeForce GTX 1660 SUPER",
+    "availability": "Dostępny",
+    "price": "1749,99 zł",
+    "image": "3.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "20",
+    "title": "Klawiatura mechaniczna Razer VX",
+    "availability": "Dostępny",
+    "price": "389,99 zł",
+    "image": "4.jpg",
+    "category": "accesories"
+  },
+  {
+    "id": "21",
+    "title": "Monitor HP 27 4K True Bright",
+    "availability": "Dostępny",
+    "price": "1100,00 zł",
+    "image": "5.jpg",
+    "category": "monitors"
+  },
+  {
+    "id": "22",
+    "title": "Słuchawki Panasonic HD Bluetooth",
+    "availability": "Dostępny",
+    "price": "180,99 zł",
+    "image": "6.jpg",
+    "category": "sound"
+  },
+  {
+    "id": "23",
+    "title": "Głośniki Genius 4.1 ULTRA SOUND",
+    "availability": "Dostępny",
+    "price": "111,99 zł",
+    "image": "7.jpg",
+    "category": "sound"
+  },
+  {
+    "id": "24",
+    "title": "Laptop Huawei, SSD 500GB, VEGA 8",
+    "availability": "Dostępny",
+    "price": "2249,99 zł",
+    "image": "8.jpg",
+    "category": "laptops"
+  },
+  {
+    "id": "25",
+    "title": "Pamięć RAM Kingston 8GB 2666MHz",
+    "availability": "Dostępny",
+    "price": "129,99 zł",
+    "image": "1.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "26",
+    "title": "Dysk SSD Goodram 500GB",
+    "availability": "Kilka sztuk",
+    "price": "219,99 zł",
+    "image": "2.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "27",
+    "title": "Gigabyte GeForce GTX 1660 SUPER",
+    "availability": "Dostępny",
+    "price": "1749,99 zł",
+    "image": "3.jpg",
+    "category": "graphic"
+  },
+  {
+    "id": "28",
+    "title": "Klawiatura mechaniczna Razer VX",
+    "availability": "Dostępny",
+    "price": "389,99 zł",
+    "image": "4.jpg",
+    "category": "accesories"
+  },
+  {
+    "id": "29",
+    "title": "Monitor HP 27 4K True Bright",
+    "availability": "Dostępny",
+    "price": "1100,00 zł",
+    "image": "5.jpg",
+    "category": "monitors"
+  },
+  {
+    "id": "30",
+    "title": "Słuchawki Panasonic HD Bluetooth",
+    "availability": "Dostępny",
+    "price": "180,99 zł",
+    "image": "6.jpg",
+    "category": "sound"
+  },
+  {
+    "id": "31",
+    "title": "Głośniki Genius 4.1 ULTRA SOUND",
+    "availability": "Dostępny",
+    "price": "111,99 zł",
+    "image": "7.jpg",
+    "category": "sound"
+  },
+  {
+    "id": "32",
+    "title": "Laptop Huawei, SSD 500GB, VEGA 8",
+    "availability": "Dostępny",
+    "price": "2249,99 zł",
+    "image": "8.jpg",
+    "category": "laptops"
+  },
+  {
+    "id": "33",
+    "title": "Pamięć RAM Kingston 8GB 2666MHz",
+    "availability": "Dostępny",
+    "price": "129,99 zł",
+    "image": "1.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "34",
+    "title": "Dysk SSD Goodram 500GB",
+    "availability": "Kilka sztuk",
+    "price": "219,99 zł",
+    "image": "2.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "35",
+    "title": "Gigabyte GeForce GTX 1660 SUPER",
+    "availability": "Dostępny",
+    "price": "1749,99 zł",
+    "image": "3.jpg",
+    "category": "graphic"
+  },
+  {
+    "id": "36",
+    "title": "Klawiatura mechaniczna Razer VX",
+    "availability": "Dostępny",
+    "price": "389,99 zł",
+    "image": "4.jpg",
+    "category": "accesories"
+  },
+  {
+    "id": "37",
+    "title": "Monitor HP 27 4K True Bright",
+    "availability": "Dostępny",
+    "price": "1100,00 zł",
+    "image": "5.jpg",
+    "category": "monitors"
+  },
+  {
+    "id": "38",
+    "title": "Słuchawki Panasonic HD Bluetooth",
+    "availability": "Dostępny",
+    "price": "180,99 zł",
+    "image": "6.jpg",
+    "category": "sound"
+  },
+  {
+    "id": "39",
+    "title": "Głośniki Genius 4.1 ULTRA SOUND",
+    "availability": "Dostępny",
+    "price": "111,99 zł",
+    "image": "7.jpg",
+    "category": "sound"
+  },
+  {
+    "id": "40",
+    "title": "Laptop Huawei, SSD 500GB, VEGA 8",
+    "availability": "Dostępny",
+    "price": "2249,99 zł",
+    "image": "8.jpg",
+    "category": "laptops"
+  },
+  {
+    "id": "41",
+    "title": "Pamięć RAM Kingston 8GB 2666MHz",
+    "availability": "Dostępny",
+    "price": "129,99 zł",
+    "image": "1.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "42",
+    "title": "Dysk SSD Goodram 500GB",
+    "availability": "Kilka sztuk",
+    "price": "219,99 zł",
+    "image": "2.jpg",
+    "category": "memory"
+  },
+  {
+    "id": "43",
+    "title": "Gigabyte GeForce GTX 1660 SUPER",
+    "availability": "Dostępny",
+    "price": "1749,99 zł",
+    "image": "3.jpg",
+    "category": "graphic"
+  },
+  {
+    "id": "44",
+    "title": "Klawiatura mechaniczna Razer VX",
+    "availability": "Dostępny",
+    "price": "389,99 zł",
+    "image": "4.jpg",
+    "category": "accesories"
+  },
+  {
+    "id": "45",
+    "title": "Monitor HP 27 4K True Bright",
+    "availability": "Dostępny",
+    "price": "1100,00 zł",
+    "image": "5.jpg",
+    "category": "laptops"
+  },
+  {
+    "id": "46",
+    "title": "Słuchawki Panasonic HD Bluetooth",
+    "availability": "Dostępny",
+    "price": "180,99 zł",
+    "image": "6.jpg",
+    "category": "sound"
+  },
+  {
+    "id": "47",
+    "title": "Głośniki Genius 4.1 ULTRA SOUND",
+    "availability": "Dostępny",
+    "price": "111,99 zł",
+    "image": "7.jpg",
+    "category": "sound"
+  },
+  {
+    "id": "48",
+    "title": "Laptop Huawei, SSD 500GB, VEGA 8",
+    "availability": "Dostępny",
+    "price": "2249,99 zł",
+    "image": "8.jpg",
+    "category": "laptops"
+  }
+]
+
+

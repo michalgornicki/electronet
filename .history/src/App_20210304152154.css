@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+}
+
+.item{
+  background-color: rgb(230, 230, 230);
+  width: 20%;
+  margin: 1%;
+  display: inline-block;
+}
+
+.item-image{
+  width: 80%;
+  margin: 5%;
+}
+
+h1, h2, h3{
+  margin: 1vmin;
+}
+
+h1{
+  font-size: 2vmin;
+}
+
+h2{
+  font-size: 2vmin;
+}
+
+h3{
+  font-size: 2vmin;
+}
+

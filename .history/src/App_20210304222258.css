@@ -1,0 +1,86 @@
+
+.App {
+  text-align: center;
+}
+
+.main-header{
+  position: relative;
+  font-size: 5vmin;
+  text-align: left;
+  margin: 2vmin;
+  margin-bottom: 8vmin;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.header{
+  position: relative;
+  font-size: 5vmin;
+  text-align: left;
+  margin: 2vmin;
+  border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.item{
+  background: linear-gradient(rgb(236, 236, 236), rgb(255, 255, 255));
+  width: 20%;
+  margin: 0.5%;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.item:hover{
+  box-shadow: 0px 0px 10px rgb(148, 148, 148);
+  transition: 0.3s;
+}
+
+.item-image{
+  width: 80%;
+  margin: 5%;
+}
+
+.add-to-cart{
+  float: right;
+  line-height: 4vmin;
+  height: 4vmin;
+  background: linear-gradient(rgb(255, 160, 0), rgb(255, 225, 173));
+  padding: 0.5vmin;
+  font-weight: 700;
+}
+
+.cart{
+  height: 2vmin;
+}
+
+h1, h2, h3{
+  margin: 1vmin;
+}
+
+h1{
+  font-size: 2vmin;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 3vmin;
+  font-weight: 700;
+  color: red;
+}
+
+h3{
+  font-size: 2vmin;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1024px) {
+  .item{
+    background-color: rgb(243, 243, 243);
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .item{
+    background-color: rgb(243, 243, 243);
+    width: 45%;
+  }
+}

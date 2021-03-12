@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.item{
+  background-color: rgb(230, 230, 230);
+  width: 20%;
+  margin: 0;
+  padding: 0;
+}
+
+.item-image{
+  width: 80%;
+}

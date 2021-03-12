@@ -1,0 +1,25 @@
+import React from 'react';
+import data from '../data.json';
+
+const ItemList = () => {
+    return(
+        <div>
+        {data.map(product =>{
+        return(
+
+        <div className="item" key={data.id}>
+        <img className="item-image" src={Image} alt=""/>
+        <h1>Tytuł {data.title}</h1>
+        <h2>{data.availability}</h2>
+        <h3>{data.score}</h3>
+        </div>
+
+        )})}
+        </div>
+        
+        )}
+
+
+
+
+export default ItemList;
