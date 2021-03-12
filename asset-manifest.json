@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/michalgornicki/electronet/static/css/main.466b956c.chunk.css",
-    "main.js": "/michalgornicki/electronet/static/js/main.57ba98e9.chunk.js",
-    "main.js.map": "/michalgornicki/electronet/static/js/main.57ba98e9.chunk.js.map",
-    "runtime-main.js": "/michalgornicki/electronet/static/js/runtime-main.c3fcc26c.js",
-    "runtime-main.js.map": "/michalgornicki/electronet/static/js/runtime-main.c3fcc26c.js.map",
-    "static/js/2.82422cf0.chunk.js": "/michalgornicki/electronet/static/js/2.82422cf0.chunk.js",
-    "static/js/2.82422cf0.chunk.js.map": "/michalgornicki/electronet/static/js/2.82422cf0.chunk.js.map",
-    "static/js/3.c7d47d2c.chunk.js": "/michalgornicki/electronet/static/js/3.c7d47d2c.chunk.js",
-    "static/js/3.c7d47d2c.chunk.js.map": "/michalgornicki/electronet/static/js/3.c7d47d2c.chunk.js.map",
-    "index.html": "/michalgornicki/electronet/index.html",
-    "static/css/main.466b956c.chunk.css.map": "/michalgornicki/electronet/static/css/main.466b956c.chunk.css.map",
-    "static/js/2.82422cf0.chunk.js.LICENSE.txt": "/michalgornicki/electronet/static/js/2.82422cf0.chunk.js.LICENSE.txt",
-    "static/media/1.5d68a951.png": "/michalgornicki/electronet/static/media/1.5d68a951.png",
-    "static/media/App.css": "/michalgornicki/electronet/static/media/bar.e60fe580.jpg"
+    "main.css": "/electronet/static/css/main.35248048.chunk.css",
+    "main.js": "/electronet/static/js/main.8bb80657.chunk.js",
+    "main.js.map": "/electronet/static/js/main.8bb80657.chunk.js.map",
+    "runtime-main.js": "/electronet/static/js/runtime-main.e2485949.js",
+    "runtime-main.js.map": "/electronet/static/js/runtime-main.e2485949.js.map",
+    "static/js/2.041f9b72.chunk.js": "/electronet/static/js/2.041f9b72.chunk.js",
+    "static/js/2.041f9b72.chunk.js.map": "/electronet/static/js/2.041f9b72.chunk.js.map",
+    "static/js/3.c7d47d2c.chunk.js": "/electronet/static/js/3.c7d47d2c.chunk.js",
+    "static/js/3.c7d47d2c.chunk.js.map": "/electronet/static/js/3.c7d47d2c.chunk.js.map",
+    "index.html": "/electronet/index.html",
+    "static/css/main.35248048.chunk.css.map": "/electronet/static/css/main.35248048.chunk.css.map",
+    "static/js/2.041f9b72.chunk.js.LICENSE.txt": "/electronet/static/js/2.041f9b72.chunk.js.LICENSE.txt",
+    "static/media/1.5d68a951.png": "/electronet/static/media/1.5d68a951.png",
+    "static/media/App.css": "/electronet/static/media/bar.e60fe580.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c3fcc26c.js",
-    "static/js/2.82422cf0.chunk.js",
-    "static/css/main.466b956c.chunk.css",
-    "static/js/main.57ba98e9.chunk.js"
+    "static/js/runtime-main.e2485949.js",
+    "static/js/2.041f9b72.chunk.js",
+    "static/css/main.35248048.chunk.css",
+    "static/js/main.8bb80657.chunk.js"
   ]
 }
