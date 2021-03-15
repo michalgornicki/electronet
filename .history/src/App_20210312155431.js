@@ -49,6 +49,7 @@ class App extends Component {
 
   ClickProduct = event => {
     document.getElementsByClassName("product-cart")[0].style.display="block";
+    document.getElementsByClassName("product-cart")[0].style.top="5%";
 
     this.setState({
       selectedProduct: event.target.parentElement.getElementsByClassName('title')[0].innerHTML,
@@ -71,7 +72,7 @@ class App extends Component {
   return (
     <div className="App" >
 
-    <h1 className="main-header"> <div className="main-header-text">ELECTRONET</div> <div className="basket"><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
+    <h1 className="main-header"> <div className="main-header-text">ELECTRONET</div> <div className="basket">W koszyku: ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
 
     <div className="bar" alt=""> <div className="bar-text"> <div className="bar-text-1">darmowa dostawa od 150 zł</div> <div className="bar-text-2">raty 10 x 0%</div> <div className="bar-text-3">zakupy dostępne od ręki</div></div> </div>
 

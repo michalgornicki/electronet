@@ -109,8 +109,8 @@ body{
 
 .cart-large{
   height: 6vmin;
+  line-height: 6vmin;
   transform: translateY(15%);
-  filter:invert(100%);
 }
 
 h1, h2, h3{

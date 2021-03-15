@@ -32,9 +32,8 @@ body{
 .basket{
   position: fixed;
   width: max-content;
-  line-height: 12vmin;
   color: white;
-  font-size: 3vmin;
+  font-size: 4vmin;
   background-color: rgba(0, 202, 17, 0.5);
   margin-right: 4vmin;
   padding-left: 1vmin;
@@ -45,10 +44,6 @@ body{
   box-shadow: 0px 0px 10px rgb(129, 129, 129);
   border-bottom-left-radius: 3vmin;
   border-bottom-right-radius: 3vmin;
-}
-
-.basket-animation{
-  animation: 1s basketAnimation;
 }
 
 .header{
@@ -105,12 +100,6 @@ body{
 
 .cart{
   height: 2vmin;
-}
-
-.cart-large{
-  height: 6vmin;
-  transform: translateY(15%);
-  filter:invert(100%);
 }
 
 h1, h2, h3{
@@ -297,7 +286,7 @@ h3{
   top: 5%;
   text-align: justify;
   float:left;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(245, 245, 245);
   padding: 2vmin;
 }
 

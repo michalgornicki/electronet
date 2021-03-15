@@ -34,6 +34,7 @@ class App extends Component {
   };
 
   AddToBasket = event => {
+    document.getElementsByClassName("basket")[0].classList.add("basket-animation");
     this.setState({
       basket: ((this.state.basket) + parseFloat(event.target.parentElement.getElementsByClassName('price')[0].innerHTML)),
       basketItems: this.state.basketItems + 1
@@ -71,7 +72,7 @@ class App extends Component {
   return (
     <div className="App" >
 
-    <h1 className="main-header"> <div className="main-header-text">ELECTRONET</div> <div className="basket"><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
+    <h1 className="main-header"> <div className="main-header-text">ELECTRONET</div> <div className="basket">W koszyku: ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
 
     <div className="bar" alt=""> <div className="bar-text"> <div className="bar-text-1">darmowa dostawa od 150 zł</div> <div className="bar-text-2">raty 10 x 0%</div> <div className="bar-text-3">zakupy dostępne od ręki</div></div> </div>
 

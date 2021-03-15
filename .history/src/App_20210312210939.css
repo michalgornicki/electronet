@@ -110,7 +110,7 @@ body{
 .cart-large{
   height: 6vmin;
   transform: translateY(15%);
-  filter:invert(100%);
+  filter:invert(180deg);
 }
 
 h1, h2, h3{

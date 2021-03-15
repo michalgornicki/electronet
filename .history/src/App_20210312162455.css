@@ -32,9 +32,8 @@ body{
 .basket{
   position: fixed;
   width: max-content;
-  line-height: 12vmin;
   color: white;
-  font-size: 3vmin;
+  font-size: 4vmin;
   background-color: rgba(0, 202, 17, 0.5);
   margin-right: 4vmin;
   padding-left: 1vmin;
@@ -49,6 +48,11 @@ body{
 
 .basket-animation{
   animation: 1s basketAnimation;
+}
+
+@keyframes basketAnimation{
+  0%{padding: 1vmin}
+  100%{padding: 2vmin}
 }
 
 .header{
@@ -105,12 +109,6 @@ body{
 
 .cart{
   height: 2vmin;
-}
-
-.cart-large{
-  height: 6vmin;
-  transform: translateY(15%);
-  filter:invert(100%);
 }
 
 h1, h2, h3{

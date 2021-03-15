@@ -32,7 +32,6 @@ body{
 .basket{
   position: fixed;
   width: max-content;
-  line-height: 12vmin;
   color: white;
   font-size: 3vmin;
   background-color: rgba(0, 202, 17, 0.5);
@@ -105,12 +104,6 @@ body{
 
 .cart{
   height: 2vmin;
-}
-
-.cart-large{
-  height: 6vmin;
-  transform: translateY(15%);
-  filter:invert(100%);
 }
 
 h1, h2, h3{
