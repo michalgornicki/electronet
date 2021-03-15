@@ -1,9 +1,10 @@
 import './App.css';
+import data from './data.json';
 import ItemList from './components/ItemList';
 import Item from './components/Item';
-import data from './data.json';
 import { render } from '@testing-library/react';
 import React, { Component } from 'react';
+import images from './';
 
 
 class App extends Component {
@@ -66,7 +67,6 @@ class App extends Component {
   }
 
   render(){
-
 
   return (
     <div className="App" >
