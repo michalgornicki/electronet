@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/electronet/static/css/main.928ef5c3.chunk.css",
-    "main.js": "/electronet/static/js/main.ec047cdd.chunk.js",
-    "main.js.map": "/electronet/static/js/main.ec047cdd.chunk.js.map",
+    "main.js": "/electronet/static/js/main.b06bd95f.chunk.js",
+    "main.js.map": "/electronet/static/js/main.b06bd95f.chunk.js.map",
     "runtime-main.js": "/electronet/static/js/runtime-main.e2485949.js",
     "runtime-main.js.map": "/electronet/static/js/runtime-main.e2485949.js.map",
     "static/js/2.b7358e05.chunk.js": "/electronet/static/js/2.b7358e05.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.e2485949.js",
     "static/js/2.b7358e05.chunk.js",
     "static/css/main.928ef5c3.chunk.css",
-    "static/js/main.ec047cdd.chunk.js"
+    "static/js/main.b06bd95f.chunk.js"
   ]
 }
