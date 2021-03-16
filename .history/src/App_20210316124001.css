@@ -29,11 +29,7 @@ body{
   float: left;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-  
-}
+a {text-decoration: none;}
 
 .basket{
   position: fixed;
@@ -298,11 +294,19 @@ h3{
   background-color: rgb(91, 212, 91);
 }
 
+#ascending:focus{
+  background-color: rgb(91, 212, 91);
+}
+
 #descending{
   border-radius: 0;
 }
 
 #descending:hover{
+  background-color: rgb(255, 145, 0);
+}
+
+#descending:focus{
   background-color: rgb(255, 145, 0);
 }
 
@@ -422,38 +426,6 @@ h3{
 .cartClose:hover{
   box-shadow: 0px 0px 10px rgb(61, 61, 61);
   transition: 0.3s;
-}
-
-.search-product{
-  position: absolute;
-  left: 35%;
-  width: 50%;
-  height: 5vmin;
-  display: inline-block;
-}
-
-.search-product-input{
-  height: 5vmin;
-  width: 50%;
-  padding: 0;
-  border: 0;
-  box-shadow: 0px 0px 15px white;
-  font-size: 2vmin;
-  font-weight: 300;
-}
-
-.search-product-input:focus{
-  outline: 0;
-}
-
-.search-product-button{
-  background-color: rgb(37, 221, 0);
-  color: white;
-  height: 5vmin;
-  width: 15%;
-  border: 0;
-  font-size: 2vmin;
-  font-weight: 600;
 }
 
 @media only screen and (max-width: 1024px) {

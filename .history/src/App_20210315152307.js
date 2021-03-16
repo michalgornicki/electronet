@@ -1,10 +1,9 @@
 import './App.css';
-import data from './data.json';
 import ItemList from './components/ItemList';
 import Item from './components/Item';
+import data from './data.json';
 import { render } from '@testing-library/react';
 import React, { Component } from 'react';
-import images from './';
 
 
 class App extends Component {
@@ -68,19 +67,19 @@ class App extends Component {
 
   render(){
 
+
   return (
     <div className="App" >
 
-    <h1 className="main-header"> <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> <form class="search-product" action=""> <input class="search-product-input" type="text"/><button class="search-product-button" type="submit">SZUKAJ</button></form> <div className="basket"><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
+      <img src="1.png" alt=""/>
+
+    <h1 className="main-header"> <div className="main-header-text">ELECTRONET</div> <div className="basket"><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
 
     <div className="bar" alt=""> <div className="bar-text"> <div className="bar-text-1">darmowa dostawa od 150 zł</div> <div className="bar-text-2">raty 10 x 0%</div> <div className="bar-text-3">zakupy dostępne od ręki</div></div> </div>
-    <div className="bar-double">
-    <div className="bar-small bar-small-1" alt=""> <div className="bar-text bar-text-small">Tanie laptopy do pracy i nauki </div> </div>
-    <div className="bar-small bar-small-2" alt=""> <div className="bar-text bar-text-small">Karty graficzne Nvidia i Radeon - rabaty do 20% </div> </div>
-    </div>
+
 
     <div className="button-bar">
-    <button id="all" className="button" onClick={() => this.setState({category: "memory disk accesories graphic sound laptops monitors"})}>Wszystko</button>
+    <button id="all" className="button" onClick={() => this.setState({category: "memory disk accesories graphic sound laptops monitors"})}>Wszystkie</button>
     <button id="memory" className="button" onClick={this.ChooseCategory}>Pamięć</button>
     <button id="disk" className="button" onClick={this.ChooseCategory}>Dyski</button>
     <button id="accesories" className="button" onClick={this.ChooseCategory}>Peryferia</button>
@@ -117,7 +116,7 @@ class App extends Component {
           <h2 className="price">{product.price}</h2>
           <h2 className="category">{product.category}</h2>
           <h2 className="description">{product.description}</h2>
-          <div className="add-to-cart" onClick={this.AddToBasket}><img className="cart" src="cart.png" alt=""/> Do koszyka</div>
+          <div className="add-to-cart" onClick={this.AddToBasket}><img className="cart" src="cart.png" alt=""/>Do koszyka</div>
         </div>
         )})
         }
@@ -130,7 +129,7 @@ class App extends Component {
         <h1 className="cartAvailability">Dostępność: {this.state.selectedAvailability}</h1>
         <h1 className="cartDescription">{this.state.selectedDescription}</h1>
         <img className="cartPhoto" src={this.state.selectedPhoto} alt=""/>
-        <div className="cartAddToBasket" onClick={this.AddToBasketCart}><img className="cart" src="cart.png" alt=""/> Do koszyka</div>
+        <div className="cartAddToBasket" onClick={this.AddToBasketCart}><img className="cart" src="cart.png" alt=""/>Do koszyka</div>
         <div><div className="cartClose" onClick={this.cartClose}>Zamknij</div></div>
 
         </div>

@@ -29,12 +29,6 @@ body{
   float: left;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-  
-}
-
 .basket{
   position: fixed;
   width: max-content;
@@ -158,13 +152,13 @@ h3{
   background-size: cover;
   text-align: center;
   float: left;
-  transition: 2s;
+  transition: 1s;
   user-select: none;
 }
 
 .bar:hover{
   background-position: 0px -150px;
-  transition: 2s;
+  transition: 1s;
 }
 
 .bar-small{
@@ -183,13 +177,13 @@ h3{
   align-items: center;
   text-align: center;
   display: inline-block;
-  transition: 2s;
+  transition: 1s;
   user-select: none;
 }
 
 .bar-small:hover{
   background-position: 0px -50px;
-  transition: 2s;
+  transition: 1s;
 }
 
 .bar-small-1{
@@ -275,13 +269,12 @@ h3{
   transition: 0.3s;
 }
 
-.button:focus {
-  background-color: rgb(39, 236, 0);
-  box-shadow: 0px 0px 5px rgb(129, 129, 129);
+.button:active {
+  border: 2px solid red;
 }
 
 .button:hover{
-  background-color: rgb(39, 236, 0);
+  background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 5px rgb(129, 129, 129);
   transition: 0.3s;
 }
@@ -422,38 +415,6 @@ h3{
 .cartClose:hover{
   box-shadow: 0px 0px 10px rgb(61, 61, 61);
   transition: 0.3s;
-}
-
-.search-product{
-  position: absolute;
-  left: 35%;
-  width: 50%;
-  height: 5vmin;
-  display: inline-block;
-}
-
-.search-product-input{
-  height: 5vmin;
-  width: 50%;
-  padding: 0;
-  border: 0;
-  box-shadow: 0px 0px 15px white;
-  font-size: 2vmin;
-  font-weight: 300;
-}
-
-.search-product-input:focus{
-  outline: 0;
-}
-
-.search-product-button{
-  background-color: rgb(37, 221, 0);
-  color: white;
-  height: 5vmin;
-  width: 15%;
-  border: 0;
-  font-size: 2vmin;
-  font-weight: 600;
 }
 
 @media only screen and (max-width: 1024px) {
