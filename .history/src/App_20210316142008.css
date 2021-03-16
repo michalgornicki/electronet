@@ -498,11 +498,6 @@ h3{
   user-select: none;
 }
 
-.order-proceed:hover{
-  box-shadow: 0px 0px 10px rgb(61, 61, 61);
-  transition: 0.3s;
-}
-
 @media only screen and (max-width: 1024px) {
   .item{
     background-color: rgb(243, 243, 243);

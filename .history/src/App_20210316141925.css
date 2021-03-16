@@ -480,7 +480,7 @@ h3{
 .order-proceed{
   position: absolute;
   bottom: 3%;
-  left: 62%;
+  left: 65%;
   padding: 2.5vmin;
   padding-left: 5vmin;
   padding-right: 5vmin;
@@ -493,14 +493,9 @@ h3{
   box-shadow: 0px 0px 10px rgb(170, 170, 170);
   border-radius: 5vmin;
   transition: 0.3s;
-  background-color: rgb(73, 218, 128);
+  background-color: rgb(90, 202, 133);
   cursor: pointer;
   user-select: none;
-}
-
-.order-proceed:hover{
-  box-shadow: 0px 0px 10px rgb(61, 61, 61);
-  transition: 0.3s;
 }
 
 @media only screen and (max-width: 1024px) {

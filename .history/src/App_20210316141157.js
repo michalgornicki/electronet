@@ -146,12 +146,7 @@ class App extends Component {
 
         </div>
 
-        <div className="my-basket-cart">
-        <h1 className="cartTitle">Twój koszyk</h1>
-        <div><div className="cartClose" onClick={this.cartClose}>Zamknij</div></div>
-        <div className="order-proceed" onClick={this.AddToBasketCart}> Dostawa i płatność</div>
-
-        </div>
+        <div className="my-basket-cart"></div>
 
         <div className="bottom-container">
         <div className="bottom-container-text">

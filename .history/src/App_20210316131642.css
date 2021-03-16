@@ -39,9 +39,9 @@ a {
   position: fixed;
   width: max-content;
   line-height: 10vmin;
-  color: rgb(0, 0, 0);
-  font-size: 2.5vmin;
-  background-color: rgba(255, 255, 255, 0.6);
+  color: white;
+  font-size: 3vmin;
+  background-color: rgba(0, 212, 18, 0.5);
   margin-right: 4vmin;
   padding-left: 1vmin;
   padding-right: 1vmin;
@@ -116,8 +116,9 @@ a {
 }
 
 .cart-large{
-  height: 5vmin;
+  height: 6vmin;
   transform: translateY(15%);
+  filter:invert(100%);
 }
 
 h1, h2, h3{
@@ -248,15 +249,7 @@ h3{
   animation-delay: 2s;
 }
 
-@keyframes textSlide{
-  0%{bottom: -50px; filter: opacity(0);}
-  33%{bottom: 0px; filter: opacity(1);}
-  100%{bottom: 0px; filter: opacity(1);}
-}
 
-.bar-hide{
-  display: none;
-}
 
 .button-bar{
   position: relative;
@@ -279,7 +272,7 @@ h3{
 }
 
 .button:focus {
-  background-color: rgb(36, 216, 0);
+  background-color: rgb(39, 236, 0);
   box-shadow: 0px 0px 5px rgb(129, 129, 129);
 }
 
@@ -453,54 +446,10 @@ h3{
   background-color: rgb(37, 221, 0);
   color: white;
   height: 5vmin;
-  line-height: 5vmin;
   width: 15%;
   border: 0;
   font-size: 2vmin;
   font-weight: 600;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-}
-
-.my-basket-cart{
-  position: fixed;
-  top: 15%;
-  user-select: none;
-  left: 15%;
-  background-color: rgb(255, 255, 255);
-  width: 70%;
-  height: 80%;
-  box-shadow: 0px 0px 15px rgb(134, 134, 134);
-  border-radius: 5vmin;
-  animation: 1s;
-  display: none;
-}
-
-.order-proceed{
-  position: absolute;
-  bottom: 3%;
-  left: 62%;
-  padding: 2.5vmin;
-  padding-left: 5vmin;
-  padding-right: 5vmin;
-  transform: translateX(-50%);
-  font-size: 3vmin;
-  font-weight: 500;
-  outline: 0;
-  border: 0;
-  margin-top: 5vmin;
-  box-shadow: 0px 0px 10px rgb(170, 170, 170);
-  border-radius: 5vmin;
-  transition: 0.3s;
-  background-color: rgb(73, 218, 128);
-  cursor: pointer;
-  user-select: none;
-}
-
-.order-proceed:hover{
-  box-shadow: 0px 0px 10px rgb(61, 61, 61);
-  transition: 0.3s;
 }
 
 @media only screen and (max-width: 1024px) {

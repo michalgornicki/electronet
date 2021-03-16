@@ -39,9 +39,9 @@ a {
   position: fixed;
   width: max-content;
   line-height: 10vmin;
-  color: rgb(0, 0, 0);
-  font-size: 2.5vmin;
-  background-color: rgba(255, 255, 255, 0.6);
+  color: white;
+  font-size: 3vmin;
+  background-color: rgba(0, 212, 18, 0.5);
   margin-right: 4vmin;
   padding-left: 1vmin;
   padding-right: 1vmin;
@@ -96,7 +96,8 @@ a {
   left: 30%;
   line-height: 3vmin;
   height: 3vmin;
-  background-color: rgb(90, 202, 133);
+  background-color: rgb(255, 255, 255);
+  border: rgb(90, 202, 133) 2px solid;
   padding: 1vmin;
   margin-bottom: 1vmin;
   font-weight: 700;
@@ -108,7 +109,7 @@ a {
 }
 
 .add-to-cart:hover{
-  background-color: rgb(61, 218, 14);
+  background-color: rgb(46, 197, 0);
 }
 
 .cart{
@@ -116,8 +117,9 @@ a {
 }
 
 .cart-large{
-  height: 5vmin;
+  height: 6vmin;
   transform: translateY(15%);
+  filter:invert(100%);
 }
 
 h1, h2, h3{
@@ -279,7 +281,7 @@ h3{
 }
 
 .button:focus {
-  background-color: rgb(36, 216, 0);
+  background-color: rgb(39, 236, 0);
   box-shadow: 0px 0px 5px rgb(129, 129, 129);
 }
 
@@ -461,46 +463,6 @@ h3{
   display: inline-block;
   text-align: center;
   cursor: pointer;
-}
-
-.my-basket-cart{
-  position: fixed;
-  top: 15%;
-  user-select: none;
-  left: 15%;
-  background-color: rgb(255, 255, 255);
-  width: 70%;
-  height: 80%;
-  box-shadow: 0px 0px 15px rgb(134, 134, 134);
-  border-radius: 5vmin;
-  animation: 1s;
-  display: none;
-}
-
-.order-proceed{
-  position: absolute;
-  bottom: 3%;
-  left: 62%;
-  padding: 2.5vmin;
-  padding-left: 5vmin;
-  padding-right: 5vmin;
-  transform: translateX(-50%);
-  font-size: 3vmin;
-  font-weight: 500;
-  outline: 0;
-  border: 0;
-  margin-top: 5vmin;
-  box-shadow: 0px 0px 10px rgb(170, 170, 170);
-  border-radius: 5vmin;
-  transition: 0.3s;
-  background-color: rgb(73, 218, 128);
-  cursor: pointer;
-  user-select: none;
-}
-
-.order-proceed:hover{
-  box-shadow: 0px 0px 10px rgb(61, 61, 61);
-  transition: 0.3s;
 }
 
 @media only screen and (max-width: 1024px) {

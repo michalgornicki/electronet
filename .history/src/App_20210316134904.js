@@ -73,16 +73,12 @@ class App extends Component {
     });    
   }
 
-  clickBasket = event => {
-    document.getElementsByClassName("my-basket-cart")[0].style.display="block";
-  }
-
   render(){
 
   return (
     <div className="App" >
 
-    <h1 className="main-header"> <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> <form class="search-product" action=""> <input class="search-product-input" type="text"/><div class="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div></form> <div className="basket" onClick={this.clickBasket}><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
+    <h1 className="main-header"> <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> <form class="search-product" action=""> <input class="search-product-input" type="text"/><div class="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div></form> <div className="basket"><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
 
     <div className="bar"  style={{display: this.state.showBars ? "block" : "none"}} alt=""> <div className="bar-text"> <div className="bar-text-1">darmowa dostawa od 150 zł</div> <div className="bar-text-2">raty 10 x 0%</div> <div className="bar-text-3">zakupy dostępne od ręki</div></div> </div>
     <div className="bar-double" style={{display: this.state.showBars ? "block" : "none"}}>
@@ -143,13 +139,6 @@ class App extends Component {
         <img className="cartPhoto" src={this.state.selectedPhoto} alt=""/>
         <div className="cartAddToBasket" onClick={this.AddToBasketCart}><img className="cart" src="cart.png" alt=""/> Do koszyka</div>
         <div><div className="cartClose" onClick={this.cartClose}>Zamknij</div></div>
-
-        </div>
-
-        <div className="my-basket-cart">
-        <h1 className="cartTitle">Twój koszyk</h1>
-        <div><div className="cartClose" onClick={this.cartClose}>Zamknij</div></div>
-        <div className="order-proceed" onClick={this.AddToBasketCart}> Dostawa i płatność</div>
 
         </div>
 
