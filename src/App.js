@@ -114,7 +114,7 @@ class App extends Component {
           <h2 className="price">{product.price}</h2>
           <h2 className="category">{product.category}</h2>
           <h2 className="description">{product.description}</h2>
-          <div className="add-to-cart" onClick={this.AddToBasket}><img className="cart" src="cart.png" alt=""/>Do koszyka</div>
+          <div className="add-to-cart" onClick={this.AddToBasket}><img className="cart" src="cart.png" alt=""/> Do koszyka</div>
         </div>
         )})
         }
@@ -127,7 +127,7 @@ class App extends Component {
         <h1 className="cartAvailability">Dostępność: {this.state.selectedAvailability}</h1>
         <h1 className="cartDescription">{this.state.selectedDescription}</h1>
         <img className="cartPhoto" src={this.state.selectedPhoto} alt=""/>
-        <div className="cartAddToBasket" onClick={this.AddToBasketCart}><img className="cart" src="cart.png" alt=""/>Do koszyka</div>
+        <div className="cartAddToBasket" onClick={this.AddToBasketCart}><img className="cart" src="cart.png" alt=""/> Do koszyka</div>
         <div><div className="cartClose" onClick={this.cartClose}>Zamknij</div></div>
 
         </div>
