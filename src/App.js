@@ -74,10 +74,13 @@ class App extends Component {
     <h1 className="main-header"> <div className="main-header-text">ELECTRONET</div> <div className="basket"><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
 
     <div className="bar" alt=""> <div className="bar-text"> <div className="bar-text-1">darmowa dostawa od 150 zł</div> <div className="bar-text-2">raty 10 x 0%</div> <div className="bar-text-3">zakupy dostępne od ręki</div></div> </div>
-
+    <div className="bar-double">
+    <div className="bar-small bar-small-1" alt=""> <div className="bar-text bar-text-small">Tanie laptopy do pracy i nauki </div> </div>
+    <div className="bar-small bar-small-2" alt=""> <div className="bar-text bar-text-small">Karty graficzne Nvidia i Radeon - rabaty do 20% </div> </div>
+    </div>
 
     <div className="button-bar">
-    <button id="all" className="button" onClick={() => this.setState({category: "memory disk accesories graphic sound laptops monitors"})}>Wszystkie</button>
+    <button id="all" className="button" onClick={() => this.setState({category: "memory disk accesories graphic sound laptops monitors"})}>Wszystko</button>
     <button id="memory" className="button" onClick={this.ChooseCategory}>Pamięć</button>
     <button id="disk" className="button" onClick={this.ChooseCategory}>Dyski</button>
     <button id="accesories" className="button" onClick={this.ChooseCategory}>Peryferia</button>
