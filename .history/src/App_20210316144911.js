@@ -89,7 +89,7 @@ class App extends Component {
   return (
     <div className="App" >
 
-    <h1 className="main-header"> <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> <form class="search-product" action=""> <input class="search-product-input" type="text" placeholder="Znajdź produkt" /><div class="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div></form> <div className="basket" onClick={this.clickBasket}><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
+    <h1 className="main-header"> <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> <form class="search-product" action=""> <input class="search-product-input" type="text"/><div class="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div></form> <div className="basket" onClick={this.clickBasket}><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
 
     <div className="bar"  style={{display: this.state.showBars ? "block" : "none"}} alt=""> <div className="bar-text"> <div className="bar-text-1">darmowa dostawa od 150 zł</div> <div className="bar-text-2">raty 10 x 0%</div> <div className="bar-text-3">zakupy dostępne od ręki</div></div> </div>
     <div className="bar-double" style={{display: this.state.showBars ? "block" : "none"}}>

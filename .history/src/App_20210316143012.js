@@ -40,21 +40,17 @@ class App extends Component {
     this.setState({
       basket: ((this.state.basket) + parseFloat(event.target.parentElement.getElementsByClassName('price')[0].innerHTML)),
       basketItems: this.state.basketItems + 1,
-      myBasket: [...this.state.myBasket, event.target.parentElement.getElementsByClassName('title')[0].innerHTML]
+      myBasket: this.state.myBasket
     });   
     console.log(this.state.myBasket)
   }
 
-  componentDidMount() {
-    this.AddToBasketCart = event => {
-    setTimeout(() => {
-      this.setState({
-        basket: ((this.state.basket) + parseFloat(event.target.parentElement.parentElement.getElementsByClassName('cartPrice')[0].innerHTML)),
-        basketItems: this.state.basketItems + 1
-      })  
-    }, 500)
+  AddToBasketCart = event => {
+    this.setState({
+      basket: ((this.state.basket) + parseFloat(event.target.parentElement.parentElement.getElementsByClassName('cartPrice')[0].innerHTML)),
+      basketItems: this.state.basketItems + 1
+    });    
   }
-}
 
   ClickProduct = event => {
     document.getElementsByClassName("product-cart")[0].style.display="block";
@@ -89,7 +85,7 @@ class App extends Component {
   return (
     <div className="App" >
 
-    <h1 className="main-header"> <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> <form class="search-product" action=""> <input class="search-product-input" type="text" placeholder="Znajdź produkt" /><div class="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div></form> <div className="basket" onClick={this.clickBasket}><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
+    <h1 className="main-header"> <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> <form class="search-product" action=""> <input class="search-product-input" type="text"/><div class="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div></form> <div className="basket" onClick={this.clickBasket}><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
 
     <div className="bar"  style={{display: this.state.showBars ? "block" : "none"}} alt=""> <div className="bar-text"> <div className="bar-text-1">darmowa dostawa od 150 zł</div> <div className="bar-text-2">raty 10 x 0%</div> <div className="bar-text-3">zakupy dostępne od ręki</div></div> </div>
     <div className="bar-double" style={{display: this.state.showBars ? "block" : "none"}}>
@@ -154,16 +150,7 @@ class App extends Component {
         </div>
 
         <div className="my-basket-cart">
-        <h1 className="basket-title">Twój koszyk</h1>
-
-        {this.state.myBasket
-        .map(basketItem =>{
-        return(
-        <li className="basket-item">{basketItem}</li>
-        )
-        }
-        )}
-
+        <h1 className="cartTitle">Twój koszyk</h1>
         <div><div className="cartClose" onClick={this.cartClose}>Zamknij</div></div>
         <div className="order-proceed" onClick={this.AddToBasketCart}> Dostawa i płatność</div>
 

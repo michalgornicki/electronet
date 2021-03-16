@@ -436,9 +436,7 @@ h3{
 }
 
 ::placeholder{
-  position: relative;
-  color: rgb(184, 184, 184);
-  padding-left: 1.5vmin;
+  color: rgb(185, 185, 185);
 }
 
 .search-product-input{
