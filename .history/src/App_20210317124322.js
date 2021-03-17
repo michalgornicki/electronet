@@ -95,13 +95,7 @@ class App extends Component {
 
   setMinPrice = event => {
     this.setState({
-      minPrice: event.target.value,
-    })
-  }
-
-  setMaxPrice = event => {
-    this.setState({
-      maxPrice: event.target.value,
+      minPrice: event.target.value
     })
   }
 
@@ -133,13 +127,8 @@ class App extends Component {
     <button id="descending" className="button" onClick={this.PriceSort}>Od najdroższego &#8595;</button>
 
     <div className="price-filter">
-
-      <input className="min-price" placeholder="od" type="text" onChange={this.setMinPrice} 
-      onKeyPress={(event) => {if (!/[0-9]/.test(event.key)) {event.preventDefault();}}}/>
-
-      <input className="max-price" placeholder="do" type="text" onChange={this.setMaxPrice}
-      onKeyPress={(event) => {if (!/[0-9]/.test(event.key)) {event.preventDefault();}}}/>
-      
+      <input className="min-price" type="text" onChange={() => console.log("hohoho")}/>
+      <input className="max-price" type="text" onChange={() => console.log("hohoho")}/>
     </div>
 
     <h1 className="header">Polecamy</h1>

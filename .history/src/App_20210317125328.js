@@ -134,10 +134,10 @@ class App extends Component {
 
     <div className="price-filter">
 
-      <input className="min-price" placeholder="od" type="text" onChange={this.setMinPrice} 
+      <input className="min-price" placeholder="od zł" type="text" onChange={this.setMinPrice} 
       onKeyPress={(event) => {if (!/[0-9]/.test(event.key)) {event.preventDefault();}}}/>
 
-      <input className="max-price" placeholder="do" type="text" onChange={this.setMaxPrice}
+      <input className="max-price" type="text" onChange={this.setMaxPrice}
       onKeyPress={(event) => {if (!/[0-9]/.test(event.key)) {event.preventDefault();}}}/>
       
     </div>

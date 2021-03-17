@@ -522,20 +522,15 @@ h3{
   position: relative;
 }
 
-.min-price, .max-price{
+.min.price{
   position: relative;
   margin: 1vmin;
-  height: 6vmin;
-  width: 16vmin;
-  border-radius: 2vmin;
-  border: 1px solid rgb(212, 212, 212);
-  text-align: center;
-  font-size: 2.5vmin;
+  width: 15vmin;
 }
 
-.min-price:focus, .max-price:focus{
-  border: 1px solid rgb(212, 212, 212);
-  outline: 0;
+.max.price{
+  position: relative;
+  margin: 1vmin;
 }
 
 @media only screen and (max-width: 1024px) {

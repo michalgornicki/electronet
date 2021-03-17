@@ -93,24 +93,12 @@ class App extends Component {
     document.getElementsByClassName("my-basket-cart")[0].style.display="block";
   }
 
-  setMinPrice = event => {
-    this.setState({
-      minPrice: event.target.value,
-    })
-  }
-
-  setMaxPrice = event => {
-    this.setState({
-      maxPrice: event.target.value,
-    })
-  }
-
   render(){
 
   return (
     <div className="App" >
 
-    <h1 className="main-header"> <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> <form className="search-product" action=""> <input className="search-product-input" type="text" placeholder="Znajdź produkt" /><div className="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div></form> <div className="basket" onClick={this.clickBasket}><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
+    <h1 className="main-header"> <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> <form class="search-product" action=""> <input class="search-product-input" type="text" placeholder="Znajdź produkt" /><div class="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div></form> <div className="basket" onClick={this.clickBasket}><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
 
     <div className="bar"  style={{display: this.state.showBars ? "block" : "none"}} alt=""> <div className="bar-text"> <div className="bar-text-1">darmowa dostawa od 150 zł</div> <div className="bar-text-2">raty 10 x 0%</div> <div className="bar-text-3">zakupy dostępne od ręki</div></div> </div>
     <div className="bar-double" style={{display: this.state.showBars ? "block" : "none"}}>
@@ -131,16 +119,6 @@ class App extends Component {
 
     <button id="ascending" className="button" onClick={this.PriceSort}>Od najtańszego &#8593;</button>
     <button id="descending" className="button" onClick={this.PriceSort}>Od najdroższego &#8595;</button>
-
-    <div className="price-filter">
-
-      <input className="min-price" placeholder="od" type="text" onChange={this.setMinPrice} 
-      onKeyPress={(event) => {if (!/[0-9]/.test(event.key)) {event.preventDefault();}}}/>
-
-      <input className="max-price" placeholder="do" type="text" onChange={this.setMaxPrice}
-      onKeyPress={(event) => {if (!/[0-9]/.test(event.key)) {event.preventDefault();}}}/>
-      
-    </div>
 
     <h1 className="header">Polecamy</h1>
 
