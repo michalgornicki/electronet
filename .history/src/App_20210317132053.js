@@ -24,7 +24,6 @@ class App extends Component {
       myBasket: [],
       minPrice: 0,
       maxPrice: 3000,
-      searchInput: 0,
     };
   }
 
@@ -88,8 +87,7 @@ class App extends Component {
     this.setState({
       showBars: false,
       searchInput: document.getElementsByClassName("search-product-input")[0].value,
-    });
-    console.log(document.getElementsByClassName("search-product-input")[0].value)    
+    });    
   }
 
   clickBasket = event => {
@@ -155,7 +153,7 @@ class App extends Component {
 
         .filter(element => parseFloat(element.price) < this.state.maxPrice && parseFloat(element.price) > this.state.minPrice)
         
-        .filter(element => element.title.toLowerCase().includes(this.state.searchInput))
+        .filter(element => element.title.includes())
 
         .sort((a, b) => {
           if (this.state.priceSort === "ascending")

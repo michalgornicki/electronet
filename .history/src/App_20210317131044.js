@@ -24,7 +24,6 @@ class App extends Component {
       myBasket: [],
       minPrice: 0,
       maxPrice: 3000,
-      searchInput: 0,
     };
   }
 
@@ -86,10 +85,8 @@ class App extends Component {
 
   searchProduct = event => {
     this.setState({
-      showBars: false,
-      searchInput: document.getElementsByClassName("search-product-input")[0].value,
-    });
-    console.log(document.getElementsByClassName("search-product-input")[0].value)    
+      showBars: false
+    });    
   }
 
   clickBasket = event => {
@@ -113,7 +110,7 @@ class App extends Component {
   return (
     <div className="App" >
 
-    <h1 className="main-header"> <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> <form className="search-product" action=""> <input className="search-product-input" type="text" placeholder="Znajdź produkt" onChange={console.log("aaa")}/><div className="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div></form> <div className="basket" onClick={this.clickBasket}><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
+    <h1 className="main-header"> <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> <form className="search-product" action=""> <input className="search-product-input" type="text" placeholder="Znajdź produkt" onChange={""}/><div className="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div></form> <div className="basket" onClick={this.clickBasket}><img className="cart-large" src="cart.png" alt=""/> ({this.state.basketItems}) {(this.state.basket).toFixed(2)} zł</div> </h1>
 
     <div className="bar"  style={{display: this.state.showBars ? "block" : "none"}} alt=""> <div className="bar-text"> <div className="bar-text-1">darmowa dostawa od 150 zł</div> <div className="bar-text-2">raty 10 x 0%</div> <div className="bar-text-3">zakupy dostępne od ręki</div></div> </div>
     <div className="bar-double" style={{display: this.state.showBars ? "block" : "none"}}>
@@ -154,8 +151,6 @@ class App extends Component {
         .filter(element => this.state.category.includes(element.category))
 
         .filter(element => parseFloat(element.price) < this.state.maxPrice && parseFloat(element.price) > this.state.minPrice)
-        
-        .filter(element => element.title.toLowerCase().includes(this.state.searchInput))
 
         .sort((a, b) => {
           if (this.state.priceSort === "ascending")

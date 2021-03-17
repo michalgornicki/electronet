@@ -89,7 +89,7 @@ class App extends Component {
       showBars: false,
       searchInput: document.getElementsByClassName("search-product-input")[0].value,
     });
-    console.log(document.getElementsByClassName("search-product-input")[0].value)    
+    console.log(this.state.searchInput)    
   }
 
   clickBasket = event => {
@@ -155,7 +155,7 @@ class App extends Component {
 
         .filter(element => parseFloat(element.price) < this.state.maxPrice && parseFloat(element.price) > this.state.minPrice)
         
-        .filter(element => element.title.toLowerCase().includes(this.state.searchInput))
+        .filter(element => element.title.includes(this.state.searchInput))
 
         .sort((a, b) => {
           if (this.state.priceSort === "ascending")

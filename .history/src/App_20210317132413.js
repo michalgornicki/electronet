@@ -155,7 +155,7 @@ class App extends Component {
 
         .filter(element => parseFloat(element.price) < this.state.maxPrice && parseFloat(element.price) > this.state.minPrice)
         
-        .filter(element => element.title.toLowerCase().includes(this.state.searchInput))
+        .filter(element => element.title.includes(this.state.searchInput))
 
         .sort((a, b) => {
           if (this.state.priceSort === "ascending")
