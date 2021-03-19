@@ -51,7 +51,6 @@ a {
   box-shadow: 0px 0px 10px rgb(129, 129, 129);
   border-bottom-left-radius: 3vmin;
   border-bottom-right-radius: 3vmin;
-  cursor: pointer;
 }
 
 .basket-animation{
@@ -488,7 +487,6 @@ h3{
   border-radius: 5vmin;
   animation: 1s;
   display: none;
-  z-index: 1;
 }
 
 .order-proceed{
@@ -513,14 +511,14 @@ h3{
 }
 
 .basket-title{
-  font-size: 6.5vmin;
-  margin-bottom: 4vmin;
+  font-size: 3.5vmin;
+  margin-bottom: 8vmin;
 }
 
 .basket-items{
   overflow-Y: scroll;
   height: 400px;
-  width: 90%;
+  width: 75%;
 }
 
 .basket-item{
@@ -530,12 +528,6 @@ h3{
   left: 5%;
   margin: 1vmin;
   box-shadow: 0px 4px 10px rgb(230, 230, 230);
-  transition: 0.3s;
-}
-
-.basket-item:hover{
-  box-shadow: 0px 4px 20px rgb(129, 129, 129);
-  transition: 0.3s;
 }
 
 ::-webkit-scrollbar{
@@ -587,12 +579,11 @@ h3{
   position: relative;
   background-color: rgb(228, 228, 228);
   border-radius: 2vmin;
-  left: 10vmin;
+  margin-left: 15vmin;
   display: inline-block;
   width: 10%;
   height: 7vmin;
   line-height: 7vmin;
-  cursor: pointer;
 }
 
 .deleteItem:hover{

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "../images/1.png";
 
 
 const Item = () => {
