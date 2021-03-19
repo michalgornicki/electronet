@@ -217,8 +217,8 @@ class App extends Component {
 
         <div className="my-basket-cart">
 
-          {this.state.myBasket.length > 0  ? 
-          <div>
+          {this.state.myBasket}
+
           <h1 className="basket-title">Twój koszyk</h1>
             <div className="basket-items">
               {this.state.myBasket
@@ -236,16 +236,6 @@ class App extends Component {
               }
               )}
             </div>
-            </div>
-
-          :
-          <div>
-          <h1 className="basket-title">Twój koszyk jest pusty...</h1>
-          <img className="cart-icon-large" src="cart-large.png" alt=""/>
-          </div>
-          }
-
-          
 
         <div><div className="cartClose" onClick={this.cartClose}>Zamknij</div></div>
         <div className="order-proceed" onClick={this.AddToBasketCart}> Dostawa i płatność</div>

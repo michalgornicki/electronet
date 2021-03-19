@@ -21,7 +21,7 @@ class App extends Component {
       selectedDescription: 0,
       selectedPhoto: 0,
       showBars: true,
-      myBasket: [],
+      myBasket: false,
       minPrice: 0,
       maxPrice: 3000,
       searchInput: "",
@@ -217,7 +217,7 @@ class App extends Component {
 
         <div className="my-basket-cart">
 
-          {this.state.myBasket.length > 0  ? 
+          {this.state.myBasket ? 
           <div>
           <h1 className="basket-title">Twój koszyk</h1>
             <div className="basket-items">
@@ -239,10 +239,8 @@ class App extends Component {
             </div>
 
           :
-          <div>
-          <h1 className="basket-title">Twój koszyk jest pusty...</h1>
-          <img className="cart-icon-large" src="cart-large.png" alt=""/>
-          </div>
+
+          "Twój koszyk jest pusty"
           }
 
           

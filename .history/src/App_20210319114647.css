@@ -625,10 +625,6 @@ h3{
   outline: 0;
 }
 
-.cart-icon-large{
-  width: 35%;
-}
-
 @media only screen and (max-width: 1024px) {
   .item{
     background-color: rgb(243, 243, 243);

@@ -239,10 +239,8 @@ class App extends Component {
             </div>
 
           :
-          <div>
-          <h1 className="basket-title">Twój koszyk jest pusty...</h1>
-          <img className="cart-icon-large" src="cart-large.png" alt=""/>
-          </div>
+
+          <h1 className="basket-title">Twój koszyk jest pusty</h1>
           }
 
           
