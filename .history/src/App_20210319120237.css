@@ -558,7 +558,7 @@ h3{
   line-height: 12vmin;
   bottom: 45%;
   margin-left: 2vmin;
-  width: 45%;
+  width: 40%;
   display: inline-block;
 }
 
@@ -626,7 +626,7 @@ h3{
 }
 
 .cart-icon-large{
-  width: 35%;
+  width: 30%;
 }
 
 @media only screen and (max-width: 1024px) {
