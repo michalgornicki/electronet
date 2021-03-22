@@ -143,48 +143,46 @@ class App extends Component {
 
     <h1 className="main-header"> 
     <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> 
-    
+    <form className="search-product" action=""> 
+    <input className="search-product-input" type="text" placeholder="Znajdź produkt" onChange={console.log("aaa")}/>
+    <div className="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div>
+    </form> 
     <div className="header-cart" onClick={this.clickBasket}>
     <img className="cart-icon-medium" src="cart.png" alt=""/> ({this.state.basketItems}) {this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2)}  zł
     </div> 
     </h1>
 
-    <form className="search-product" action=""> 
-    <input className="search-product-input" type="text" placeholder="Znajdź produkt" onChange={console.log("aaa")}/>
-    <div className="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div>
-    </form> 
-
     <div className="bar-slider">
-      <div className="bar slide slide-1" alt="" style={{opacity: this.state.slideIndex == 1 ? "1" : "0"}}> 
-        <div className="bar-text"> 
-          <div className="bar-text-1">darmowa dostawa od 150 zł</div> 
-          <div className="bar-text-2">raty 10 x 0%</div> 
-          <div className="bar-text-3">zakupy dostępne od ręki</div>
-        </div> 
-      </div>
+    <div className="bar slide slide-1" alt="" style={{opacity: this.state.slideIndex == 1 ? "1" : "0"}}> 
+      <div className="bar-text"> 
+        <div className="bar-text-1">darmowa dostawa od 150 zł</div> 
+        <div className="bar-text-2">raty 10 x 0%</div> 
+        <div className="bar-text-3">zakupy dostępne od ręki</div>
+      </div> 
+    </div>
 
-      <div className="bar slide slide-2" alt="" style={{opacity: this.state.slideIndex == 2 ? "1" : "0"}}> 
-        <div className="bar-text"> 
-          <div className="bar-text-1">Najlepsze akcesoria gamingowe</div> 
-        </div> 
-      </div>
+    <div className="bar slide slide-2" alt="" style={{opacity: this.state.slideIndex == 2 ? "1" : "0"}}> 
+      <div className="bar-text"> 
+        <div className="bar-text-1">Najlepsze akcesoria gamingowe</div> 
+      </div> 
+    </div>
 
-      <div className="bar slide slide-3" alt="" style={{opacity: this.state.slideIndex == 3 ? "1" : "0"}}> 
-        <div className="bar-text"> 
-          <div className="bar-text-1">Klawiatury do pracy zdalnej</div> 
-        </div> 
-      </div>
+    <div className="bar slide slide-3" alt="" style={{opacity: this.state.slideIndex == 3 ? "1" : "0"}}> 
+      <div className="bar-text"> 
+        <div className="bar-text-1">Klawiatury do pracy zdalnej</div> 
+      </div> 
+    </div>
 
-      <div className="bar slide slide-4" alt="" style={{opacity: this.state.slideIndex == 4 ? "1" : "0"}}> 
-        <div className="bar-text"> 
-          <div className="bar-text-1">Profesjonalne drony już od 999 zł</div> 
-        </div> 
-      </div>
+    <div className="bar slide slide-4" alt="" style={{opacity: this.state.slideIndex == 4 ? "1" : "0"}}> 
+      <div className="bar-text"> 
+        <div className="bar-text-1">Profesjonalne drony już od 999 zł</div> 
+      </div> 
+    </div>
 
-      <div className="bar slide slide-5" alt="" style={{opacity: this.state.slideIndex == 5 ? "1" : "0"}}> 
-        <div className="bar-text"> 
-          <div className="bar-text-1">Zapisz się na newsletter i zgarnij rabat 10%</div> 
-        </div> 
+    <div className="bar slide slide-5" alt="" style={{opacity: this.state.slideIndex == 5 ? "1" : "0"}}> 
+      <div className="bar-text"> 
+        <div className="bar-text-1">Zapisz się na newsletter i zgarnij rabat 10%</div> 
+      </div> 
     </div>
     </div>
 

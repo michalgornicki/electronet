@@ -166,10 +166,6 @@ h3{
   cursor: pointer;
 }
 
-.bar-slider{
-  position: relative;
-}
-
 .slide{
   position: absolute;
   background-position: center;
@@ -348,6 +344,7 @@ h3{
   display: inline-block;
   width: 100%;
   left: 0%;
+  background: linear-gradient(45deg, rgba(161, 0, 135, 0.6),rgba(140, 0, 255, 0.6), rgba(59, 0, 198, 0.6), rgba(109, 10, 223, 0.6), rgba(206, 25, 176, 0.6)), rgba(224, 39, 193, 0.6);
 }
 
 .button{
@@ -366,11 +363,13 @@ h3{
 
 .button:focus {
   outline: solid 2px rgb(211, 18, 250);
-  color: rgb(211, 18, 250);
+  color: rgb(255, 255, 255);
+  background: linear-gradient(45deg, rgba(161, 0, 135, 0.6),rgba(140, 0, 255, 0.6));
+
 }
 
 .button:hover{
-  color: rgb(211, 18, 250);
+  color: rgb(255, 255, 255);
   outline: solid 2px rgb(211, 18, 250);
   transition: 0.3s;
   background-size: 100% 100%;
@@ -516,7 +515,6 @@ h3{
 
 .search-product{
   position: absolute;
-  top: 0.5%;
   left: 35%;
   width: 50%;
   height: 5vmin;
@@ -729,83 +727,8 @@ h3{
 }
 
 @media only screen and (max-width: 700px) {
-
-  .main-header{
-  padding-left: 2vmin;
-  font-size: 6vmin;
-  height: 12vmin;
-  line-height: 12vmin;
-  }
-
-  .search-product{
-    position: absolute;
-    left: 10%;
-    width: 80%;
-    top: 1%;
-    height: 8vmin;
-    display: inline-block;
-    z-index: 1;
-  }
-
-  .search-product-input{
-    height: 8vmin;
-    width: 70%;
-    padding: 0;
-    border: 0;
-    box-shadow: 0px 0px 15px white;
-    font-size: 3vmin;
-    font-weight: 300;
-  }
-  
-  .search-product-button{
-    background-color: rgb(204, 0, 194);
-    color: white;
-    height: 8vmin;
-    line-height: 8vmin;
-    width: 25%;
-    border: 0;
-    font-size: 3vmin;
-    font-weight: 600;
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-  }
-
   .item{
     background-color: rgb(243, 243, 243);
     width: 45%;
   }
-
-  .bar{
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .bar-small{
-    display: none;
-  }
-
-  .bar-slider{
-    position: relative;
-    margin-bottom: 100vmin;
-  }
-
-  .bar-text{
-    font-size: 6vmin;
-    width: 80%;
-  }
-  
-  .button-bar{
-    width: 100%;
-    margin-bottom: 2vmin;
-  }
-
-  .button{
-    font-size: 5vmin;
-  }
-
-  .header{
-    font-size: 7vmin;
-    margin-left: 2vmin;
-}
 }

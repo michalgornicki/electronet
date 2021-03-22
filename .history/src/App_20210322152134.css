@@ -732,9 +732,8 @@ h3{
 
   .main-header{
   padding-left: 2vmin;
-  font-size: 6vmin;
+  font-size: 5vmin;
   height: 12vmin;
-  line-height: 12vmin;
   }
 
   .search-product{
@@ -778,7 +777,6 @@ h3{
 
   .bar{
     width: 100%;
-    margin-left: 0;
   }
 
   .bar-small{
@@ -801,7 +799,7 @@ h3{
   }
 
   .button{
-    font-size: 5vmin;
+    font-size: 6vmin;
   }
 
   .header{
