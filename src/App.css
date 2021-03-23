@@ -29,6 +29,7 @@ body{
   float: left;
 }
 
+
 a {
   text-decoration: none;
   color: white;
@@ -62,10 +63,17 @@ a {
   position: relative;
   margin-top: 6vmin;
   padding-top: 2vmin;
-  margin-left: 9vmin;
-  font-size: 4vmin;
+  margin-left: 7vmin;
+  font-size: 6vmin;
   text-align: left;
-  border-top: 1px solid rgb(201, 201, 201);
+}
+
+.items-display{
+  position: relative;
+  border: 1px solid rgb(197, 197, 197);
+  left: 2.5%;
+  width: 95%;
+  margin-bottom: 1vmin;
 }
 
 .item{
@@ -346,11 +354,12 @@ h3{
 .button-bar{
   position: relative;
   display: inline-block;
-  width: 100%;
-  left: 0%;
+  width: fit-content;
+  margin: 1vmin;
+  border: 1px solid rgb(211, 211, 211);
 }
 
-.button{
+.button-category{
   margin: 1.5vmin;
   padding: 2vmin;
   padding-left: 4vmin;
@@ -364,12 +373,26 @@ h3{
   outline: solid 2px rgb(255, 255, 255);
 }
 
-.button:focus {
+.button-price-sort{
+  margin: 1.5vmin;
+  padding: 2vmin;
+  padding-left: 4vmin;
+  padding-right: 4vmin;
+  border: 0px solid gray;
+  font-size: 2.3vmin;
+  font-weight: 100;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: white;
+  outline: solid 2px rgb(255, 255, 255);
+}
+
+.button-category:focus {
   outline: solid 2px rgb(211, 18, 250);
   color: rgb(211, 18, 250);
 }
 
-.button:hover{
+.button-category:hover{
   color: rgb(211, 18, 250);
   outline: solid 2px rgb(211, 18, 250);
   transition: 0.3s;
@@ -449,15 +472,32 @@ h3{
   float: right;
 }
 
+.cart-text{
+  float: left;
+  width: 40%;
+}
+
 .cartDescription{
   position: relative;
-  width: 40%;
   left: 10%;
+  width: 100%;
   top: 5%;
   text-align: justify;
-  float:left;
   background-color: rgb(238, 238, 238);
   padding: 2vmin;
+}
+
+.cart-product-info{
+  position: relative;
+  width: 100%;
+  left: 10%;
+  top: 5%;
+  border: 1px solid gray;
+  margin: 2px;
+  padding-left: 2vmin;
+  padding-right: 2vmin;
+  padding-bottom: 1vmin;
+  padding-top: 1vmin;
 }
 
 .cartAddToBasket{
@@ -719,6 +759,21 @@ h3{
 
 .cart-icon-large{
   width: 35%;
+}
+
+.delivery-cart{
+  position: fixed;
+  top: 15%;
+  user-select: none;
+  left: 15%;
+  background-color: rgb(255, 255, 255);
+  width: 70%;
+  height: 80%;
+  box-shadow: 0px 0px 15px rgb(134, 134, 134);
+  border-radius: 5vmin;
+  animation: 1s;
+  display: none;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 1024px) {

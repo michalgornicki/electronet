@@ -135,6 +135,10 @@ class App extends Component {
     this.showSlides();
   }
 
+  orderProceed = event => {
+    
+  }
+
 
   render(){
 
@@ -194,19 +198,20 @@ class App extends Component {
     </div>
 
     <div className="button-bar">
-    <button id="all" className="button" onClick={() => this.setState({category: "memory disk accesories graphic sound laptops monitors"})}>Wszystko</button>
-    <button id="memory" className="button" onClick={this.ChooseCategory}>Pamięć</button>
-    <button id="disk" className="button" onClick={this.ChooseCategory}>Dyski</button>
-    <button id="accesories" className="button" onClick={this.ChooseCategory}>Peryferia</button>
-    <button id="graphic" className="button" onClick={this.ChooseCategory}>Karty graficzne</button>
-    <button id="sound" className="button" onClick={this.ChooseCategory}>Dźwięk</button>
-    <button id="laptops" className="button" onClick={this.ChooseCategory}>Laptopy</button>
-    <button id="monitors" className="button" onClick={this.ChooseCategory}>Monitory</button>
+    <button id="all" className="button-category" onClick={() => this.setState({category: "memory disk accesories graphic sound laptops monitors"})}>Wszystko</button>
+    <button id="memory" className="button-category" onClick={this.ChooseCategory}>Pamięć</button>
+    <button id="disk" className="button-category" onClick={this.ChooseCategory}>Dyski</button>
+    <button id="accesories" className="button-category" onClick={this.ChooseCategory}>Peryferia</button>
+    <button id="graphic" className="button-category" onClick={this.ChooseCategory}>Karty graficzne</button>
+    <button id="sound" className="button-category" onClick={this.ChooseCategory}>Dźwięk</button>
+    <button id="laptops" className="button-category" onClick={this.ChooseCategory}>Laptopy</button>
+    <button id="monitors" className="button-category" onClick={this.ChooseCategory}>Monitory</button>
     </div>
 
-    <button id="ascending" className="button" onClick={this.PriceSort}>Od najtańszego &#8593;</button>
-    <button id="descending" className="button" onClick={this.PriceSort}>Od najdroższego &#8595;</button>
-
+    <div className="button-bar">
+    <button id="ascending" className="button-price-sort" onClick={this.PriceSort}>Od najtańszego &#8593;</button>
+    <button id="descending" className="button-price-sort" onClick={this.PriceSort}>Od najdroższego &#8595;</button>
+    
     <div className="price-filter">
 
       <input className="min-price" placeholder="0" type="text" onChange={this.setMinPrice} 
@@ -216,11 +221,12 @@ class App extends Component {
       onKeyPress={(event) => {if (!/[0-9]/.test(event.key)) {event.preventDefault();}}}/>
       
     </div>
+    </div>
 
     <h1 className="header">Polecamy</h1>
 
 
-    <div>
+    <div className="items-display">
         {data
         
         .filter(element => this.state.category.includes(element.category))
@@ -256,7 +262,14 @@ class App extends Component {
           <h1 className="cartTitle">{this.state.selectedProduct}</h1>
           <h1 className="cartPrice">{this.state.selectedPrice} zł</h1>
           <h1 className="cartAvailability">Dostępność: {this.state.selectedAvailability}</h1>
+          <div className="cart-text">
           <h1 className="cartDescription">{this.state.selectedDescription}</h1>
+          <h1 className="cart-product-info">Gwarancja producenta: 24 miesiące</h1>
+          <h1 className="cart-product-info">Produkt nowy</h1>
+          <h1 className="cart-product-info">Waga: 500g</h1>
+          <h1 className="cart-product-info">Kolor: czarny</h1>
+          </div>
+
           <img className="cartPhoto" src={this.state.selectedPhoto} alt=""/>
           <div className="cartAddToBasket" onClick={this.AddToBasketCart}><img className="cart" src="cart.png" alt=""/> Do koszyka</div>
           <div><div className="cartClose" onClick={this.cartClose}>Zamknij</div></div>
@@ -297,6 +310,10 @@ class App extends Component {
 
         <div><div className="cartClose" onClick={this.cartClose}>Zamknij</div></div>
         <div className="order-proceed" onClick={this.AddToBasketCart}> Dostawa i płatność</div>
+
+        </div>
+
+        <div className="delivery-cart">
 
         </div>
 
