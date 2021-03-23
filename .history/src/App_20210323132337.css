@@ -61,7 +61,7 @@ a {
 
 .header{
   position: relative;
-  margin-top: 0vmin;
+  margin-top: 6vmin;
   padding-top: 2vmin;
   margin-left: 7vmin;
   font-size: 6vmin;
@@ -73,11 +73,7 @@ a {
   border: 1px solid rgb(197, 197, 197);
   left: 2.5%;
   width: 95%;
-  padding-bottom: 5vmin;
-  padding-top: 5vmin;
-  margin-top: 2vmin;
-  margin-bottom: 2vmin;
-  background-color: rgb(233, 233, 233);
+  margin-bottom: 1vmin;
 }
 
 .item{
@@ -388,12 +384,6 @@ h3{
   border: 1px solid rgb(204, 204, 204);
 }
 
-.category-icon{
-  height: 3vmin;
-  transform: translateY(20%);
-  margin-left: 1vmin;
-}
-
 .button-price-sort{
   margin: 1.5vmin;
   padding: 2vmin;
@@ -635,12 +625,12 @@ h3{
 
 .my-basket-cart{
   position: fixed;
-  top: 2.5%;
+  top: 15%;
   user-select: none;
-  left: 12.5%;
+  left: 15%;
   background-color: rgb(255, 255, 255);
-  width: 75%;
-  height: 95%;
+  width: 70%;
+  height: 80%;
   box-shadow: 0px 0px 15px rgb(134, 134, 134);
   border-radius: 5vmin;
   animation: 1s;
@@ -796,12 +786,12 @@ h3{
 
 .delivery-cart{
   position: fixed;
-  top: 2.5%;
+  top: 15%;
   user-select: none;
-  left: 12.5%;
+  left: 15%;
   background-color: rgb(255, 255, 255);
-  width: 75%;
-  height: 95%;
+  width: 70%;
+  height: 80%;
   box-shadow: 0px 0px 15px rgb(134, 134, 134);
   border-radius: 5vmin;
   animation: 1s;
@@ -861,13 +851,9 @@ h3{
 
 .basket-value{
   position: relative;
-  top: 12%;
-  right: 5%;
-  width: 30%;
-  padding: 4vmin;
-  background-color: rgb(206, 206, 206);
-  font-size: 3vmin;
-  float: right;
+  left: 70%;
+  top: 20%;
+  font-size: 4vmin;
 }
 
 @media only screen and (max-width: 1024px) {

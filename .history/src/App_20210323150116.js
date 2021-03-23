@@ -239,7 +239,7 @@ orderSummary = event => {
     </div>
 
     <div className="button-bar">
-    <button id="all" className="button-category" onClick={() => this.setState({category: "memory disk accesories graphic sound laptops monitors"})}>Wszystko <img class="category-icon" src="all.png" alt=""/></button>
+    <button id="all" className="button-category" onClick={() => this.setState({category: "memory disk accesories graphic sound laptops monitors"})}>Wszystko <img class="category-icon" src="ram.png" alt=""/></button>
     <button id="memory" className="button-category" onClick={this.ChooseCategory}>Pamięć <img class="category-icon" src="ram.png" alt=""/></button>
     <button id="disk" className="button-category" onClick={this.ChooseCategory}>Dyski <img class="category-icon" src="hard-disk.png" alt=""/></button>
     <button id="accesories" className="button-category" onClick={this.ChooseCategory}>Peryferia <img class="category-icon" src="keyboard.png" alt=""/></button>

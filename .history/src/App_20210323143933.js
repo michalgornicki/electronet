@@ -174,7 +174,7 @@ class App extends Component {
   }
 
 orderSummary = event => {
-  
+
 }
 
   render(){
@@ -239,14 +239,14 @@ orderSummary = event => {
     </div>
 
     <div className="button-bar">
-    <button id="all" className="button-category" onClick={() => this.setState({category: "memory disk accesories graphic sound laptops monitors"})}>Wszystko <img class="category-icon" src="all.png" alt=""/></button>
-    <button id="memory" className="button-category" onClick={this.ChooseCategory}>Pamięć <img class="category-icon" src="ram.png" alt=""/></button>
-    <button id="disk" className="button-category" onClick={this.ChooseCategory}>Dyski <img class="category-icon" src="hard-disk.png" alt=""/></button>
-    <button id="accesories" className="button-category" onClick={this.ChooseCategory}>Peryferia <img class="category-icon" src="keyboard.png" alt=""/></button>
-    <button id="graphic" className="button-category" onClick={this.ChooseCategory}>Karty graficzne <img class="category-icon" src="graphics-card.png" alt=""/></button>
-    <button id="sound" className="button-category" onClick={this.ChooseCategory}>Dźwięk <img class="category-icon" src="speaker.png" alt=""/></button>
-    <button id="laptops" className="button-category" onClick={this.ChooseCategory}>Laptopy <img class="category-icon" src="laptop.png" alt=""/></button>
-    <button id="monitors" className="button-category" onClick={this.ChooseCategory}>Monitory <img class="category-icon" src="lcd.png" alt=""/></button>
+    <button id="all" className="button-category" onClick={() => this.setState({category: "memory disk accesories graphic sound laptops monitors"})}>Wszystko</button>
+    <button id="memory" className="button-category" onClick={this.ChooseCategory}>Pamięć</button>
+    <button id="disk" className="button-category" onClick={this.ChooseCategory}>Dyski</button>
+    <button id="accesories" className="button-category" onClick={this.ChooseCategory}>Peryferia</button>
+    <button id="graphic" className="button-category" onClick={this.ChooseCategory}>Karty graficzne</button>
+    <button id="sound" className="button-category" onClick={this.ChooseCategory}>Dźwięk</button>
+    <button id="laptops" className="button-category" onClick={this.ChooseCategory}>Laptopy</button>
+    <button id="monitors" className="button-category" onClick={this.ChooseCategory}>Monitory</button>
     </div>
 
     <div className="button-bar">
@@ -387,8 +387,9 @@ orderSummary = event => {
         <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Ulica i numer"/></form></h1>
         <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Kod pocztowy"/></form></h1>
         <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Miejscowość"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="E-mail"/></form></h1>
+        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="E-mail" title="Eight or more characters" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"/></form></h1>
         <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Telefon"/></form></h1>
+        <button>wyślij</button>
         </div>
 
         <h1 className="delivery-title ">Zgody formalne</h1>

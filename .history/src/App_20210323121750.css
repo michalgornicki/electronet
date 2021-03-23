@@ -49,7 +49,7 @@ a {
   float: right;
   right: 0%;
   z-index: 1;
-  box-shadow: 3px 0px 8px rgb(0, 0, 0);
+  box-shadow: 0px 0px 10px rgb(129, 129, 129);
   border-bottom-left-radius: 3vmin;
   border-bottom-right-radius: 3vmin;
   cursor: pointer;
@@ -61,7 +61,7 @@ a {
 
 .header{
   position: relative;
-  margin-top: 0vmin;
+  margin-top: 6vmin;
   padding-top: 2vmin;
   margin-left: 7vmin;
   font-size: 6vmin;
@@ -73,11 +73,7 @@ a {
   border: 1px solid rgb(197, 197, 197);
   left: 2.5%;
   width: 95%;
-  padding-bottom: 5vmin;
-  padding-top: 5vmin;
-  margin-top: 2vmin;
-  margin-bottom: 2vmin;
-  background-color: rgb(233, 233, 233);
+  margin-bottom: 1vmin;
 }
 
 .item{
@@ -173,7 +169,7 @@ h3{
   float: left;
   transition: 2s;
   cursor: pointer;
-  outline: 2px solid rgb(0, 0, 0);
+  border: 3px solid purple;
 }
 
 .bar-container{
@@ -233,7 +229,6 @@ h3{
   display: inline-block;
   transition: 2s;
   cursor: pointer;
-  outline: 2px solid rgb(0, 0, 0);
 }
 
 .bar-small:hover{
@@ -386,12 +381,6 @@ h3{
   background-color: white;
   outline: solid 2px rgb(255, 255, 255);
   border: 1px solid rgb(204, 204, 204);
-}
-
-.category-icon{
-  height: 3vmin;
-  transform: translateY(20%);
-  margin-left: 1vmin;
 }
 
 .button-price-sort{
@@ -595,16 +584,13 @@ h3{
 }
 
 .search-product-input{
-  height: 40px;
+  height: 5vmin;
   width: 50%;
-  border: 0;
-  outline: 0;
   padding: 0;
-  margin: 0;
+  border: 0;
+  box-shadow: 0px 0px 15px white;
   font-size: 2vmin;
   font-weight: 300;
-  box-shadow: 4px 4px 5px black;
-
 }
 
 .search-product-input:focus{
@@ -614,19 +600,15 @@ h3{
 .search-product-button{
   background-color: rgb(204, 0, 194);
   color: white;
-  height: 40px;
+  height: 5vmin;
   line-height: 5vmin;
   width: 15%;
   border: 0;
-  outline: 0;
-  padding: 0;
-  margin: 0;
   font-size: 2vmin;
   font-weight: 600;
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  box-shadow: 4px 4px 5px black;
 }
 
 .search-product-button:hover{
@@ -635,12 +617,12 @@ h3{
 
 .my-basket-cart{
   position: fixed;
-  top: 2.5%;
+  top: 15%;
   user-select: none;
-  left: 12.5%;
+  left: 15%;
   background-color: rgb(255, 255, 255);
-  width: 75%;
-  height: 95%;
+  width: 70%;
+  height: 80%;
   box-shadow: 0px 0px 15px rgb(134, 134, 134);
   border-radius: 5vmin;
   animation: 1s;
@@ -747,20 +729,18 @@ h3{
 
 .deleteItem{
   position: relative;
-  background-color: rgb(204, 204, 204);
-  color: white;
-  border-radius: 20vmin;
+  background-color: rgb(228, 228, 228);
+  border-radius: 2vmin;
   left: 10vmin;
   display: inline-block;
-  height: 8vmin;
-  width: 8vmin;
-  line-height: 8vmin;
+  width: 10%;
+  height: 7vmin;
+  line-height: 7vmin;
   cursor: pointer;
-  border: 1px solid rgb(196, 196, 196);
 }
 
 .deleteItem:hover{
-  background-color: rgb(153, 153, 153);
+  background-color: rgb(190, 190, 190);
 }
 
 .order-proceed:hover{
@@ -796,12 +776,12 @@ h3{
 
 .delivery-cart{
   position: fixed;
-  top: 2.5%;
+  top: 15%;
   user-select: none;
-  left: 12.5%;
+  left: 15%;
   background-color: rgb(255, 255, 255);
-  width: 75%;
-  height: 95%;
+  width: 70%;
+  height: 80%;
   box-shadow: 0px 0px 15px rgb(134, 134, 134);
   border-radius: 5vmin;
   animation: 1s;
@@ -857,17 +837,6 @@ h3{
   text-align: left;
   margin-top: 2vmin;
   margin-left: 4vmin;
-}
-
-.basket-value{
-  position: relative;
-  top: 12%;
-  right: 5%;
-  width: 30%;
-  padding: 4vmin;
-  background-color: rgb(206, 206, 206);
-  font-size: 3vmin;
-  float: right;
 }
 
 @media only screen and (max-width: 1024px) {

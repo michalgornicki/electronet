@@ -61,7 +61,7 @@ a {
 
 .header{
   position: relative;
-  margin-top: 0vmin;
+  margin-top: 6vmin;
   padding-top: 2vmin;
   margin-left: 7vmin;
   font-size: 6vmin;
@@ -73,11 +73,7 @@ a {
   border: 1px solid rgb(197, 197, 197);
   left: 2.5%;
   width: 95%;
-  padding-bottom: 5vmin;
-  padding-top: 5vmin;
-  margin-top: 2vmin;
-  margin-bottom: 2vmin;
-  background-color: rgb(233, 233, 233);
+  margin-bottom: 1vmin;
 }
 
 .item{
@@ -391,7 +387,7 @@ h3{
 .category-icon{
   height: 3vmin;
   transform: translateY(20%);
-  margin-left: 1vmin;
+  margin-left: 2vmin;
 }
 
 .button-price-sort{

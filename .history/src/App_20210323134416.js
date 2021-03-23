@@ -140,42 +140,11 @@ class App extends Component {
     document.getElementsByClassName("delivery-cart")[0].style.display="block";
   }
 
-  selectCourier = event => {
-    this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2) < 151 ?
+  selectDelivery = event => {
     this.setState({
-      selectedDelivery: 15
+      selectedDelivery: ""
     })
-
-    : 
-
-    this.setState({
-      selectedDelivery: 0
-    })
-    
   }
-
-    selectInpost = event => {
-      this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2) < 151 ?
-    this.setState({
-      selectedDelivery: "10"
-    })
-
-    : 
-
-    this.setState({
-      selectedDelivery: 0
-    })
-    }
-
-    selectPickup = event => {
-        this.setState({
-          selectedDelivery: "0"
-        })
-  }
-
-orderSummary = event => {
-  
-}
 
   render(){
 
@@ -239,14 +208,14 @@ orderSummary = event => {
     </div>
 
     <div className="button-bar">
-    <button id="all" className="button-category" onClick={() => this.setState({category: "memory disk accesories graphic sound laptops monitors"})}>Wszystko <img class="category-icon" src="all.png" alt=""/></button>
-    <button id="memory" className="button-category" onClick={this.ChooseCategory}>Pamięć <img class="category-icon" src="ram.png" alt=""/></button>
-    <button id="disk" className="button-category" onClick={this.ChooseCategory}>Dyski <img class="category-icon" src="hard-disk.png" alt=""/></button>
-    <button id="accesories" className="button-category" onClick={this.ChooseCategory}>Peryferia <img class="category-icon" src="keyboard.png" alt=""/></button>
-    <button id="graphic" className="button-category" onClick={this.ChooseCategory}>Karty graficzne <img class="category-icon" src="graphics-card.png" alt=""/></button>
-    <button id="sound" className="button-category" onClick={this.ChooseCategory}>Dźwięk <img class="category-icon" src="speaker.png" alt=""/></button>
-    <button id="laptops" className="button-category" onClick={this.ChooseCategory}>Laptopy <img class="category-icon" src="laptop.png" alt=""/></button>
-    <button id="monitors" className="button-category" onClick={this.ChooseCategory}>Monitory <img class="category-icon" src="lcd.png" alt=""/></button>
+    <button id="all" className="button-category" onClick={() => this.setState({category: "memory disk accesories graphic sound laptops monitors"})}>Wszystko</button>
+    <button id="memory" className="button-category" onClick={this.ChooseCategory}>Pamięć</button>
+    <button id="disk" className="button-category" onClick={this.ChooseCategory}>Dyski</button>
+    <button id="accesories" className="button-category" onClick={this.ChooseCategory}>Peryferia</button>
+    <button id="graphic" className="button-category" onClick={this.ChooseCategory}>Karty graficzne</button>
+    <button id="sound" className="button-category" onClick={this.ChooseCategory}>Dźwięk</button>
+    <button id="laptops" className="button-category" onClick={this.ChooseCategory}>Laptopy</button>
+    <button id="monitors" className="button-category" onClick={this.ChooseCategory}>Monitory</button>
     </div>
 
     <div className="button-bar">
@@ -358,15 +327,15 @@ orderSummary = event => {
 
         <h1 className="basket-title">Dostawa i płatność</h1>
 
-        <h1 className="basket-value">Wartość koszyka: {this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2)} zł</h1>
+        <h1 className="basket-value">Wartość koszyka: {parseFloat(this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2)) + 7.99} zł</h1>
 
 
         <h1 className="delivery-title">1. Sposób dostawy</h1>
         
         <div className="delivery">
-        <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectCourier}/> Kurier - InPost, UPS lub FedEx - 14.99 zł</div></h1>
-        <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectInpost}/> Paczkomat inPost 24/7 9.99 zł</div></h1>
-        <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectPickup}/> Odbiór osobisty w salonie Electronet - 0 zł</div></h1>
+        <h1><div className="delivery-type"><input type="radio" name="delivery" checked={this.setState({selectedDelivery: 14.99})}/> Kurier - InPost, UPS lub FedEx - 14.99 zł</div></h1>
+        <h1><div className="delivery-type"><input type="radio" name="delivery" checked={this.selectDelivery}/> Paczkomat inPost 24/7 9.99 zł</div></h1>
+        <h1><div className="delivery-type"><input type="radio" name="delivery" checked={this.selectDelivery}/> Odbiór osobisty w salonie Electronet - 0 zł</div></h1>
         <h1></h1>
         </div>
 
@@ -399,7 +368,7 @@ orderSummary = event => {
           
 
         <div className="cartClose" onClick={this.cartClose}>Wróć</div>
-        <div className="order-proceed" onClick={this.orderSummary}>Podsumowanie</div>
+        <div className="order-proceed" onClick={this.orderProceed}>Podsumowanie</div>
 
         </div>
         </div>

@@ -73,10 +73,8 @@ a {
   border: 1px solid rgb(197, 197, 197);
   left: 2.5%;
   width: 95%;
-  padding-bottom: 5vmin;
-  padding-top: 5vmin;
-  margin-top: 2vmin;
-  margin-bottom: 2vmin;
+  padding-bottom: 4vmin;
+  padding-top: 4vmin;
   background-color: rgb(233, 233, 233);
 }
 
