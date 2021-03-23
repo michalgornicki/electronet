@@ -314,8 +314,8 @@ h3{
 
 .bar-selector-container{
   position: absolute;
-  top: 46vh;
-  width: 60%;
+  top: 45vh;
+  left: 20%;
 }
 
 .bar-selector{

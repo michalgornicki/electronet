@@ -230,15 +230,6 @@ orderSummary = event => {
           <div className="bar-text-1">Zapisz się na newsletter i zgarnij rabat 10%</div> 
         </div> 
     </div>
-
-    <div className="bar-selector-container">
-    <div className="bar-selector" style={{color: this.state.slideIndex == 1 ? "white" : "gray"}}>___</div>
-    <div className="bar-selector" style={{color: this.state.slideIndex == 2 ? "white" : "gray"}}>___</div>
-    <div className="bar-selector" style={{color: this.state.slideIndex == 3 ? "white" : "gray"}}>___</div>
-    <div className="bar-selector" style={{color: this.state.slideIndex == 4 ? "white" : "gray"}}>___</div>
-    <div className="bar-selector" style={{color: this.state.slideIndex == 5 ? "white" : "gray"}}>___</div>
-    </div>
-
     </div>
 
     <div className="bar-double" style={{display: this.state.showBars ? "block" : "none"}}>

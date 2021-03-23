@@ -232,11 +232,11 @@ orderSummary = event => {
     </div>
 
     <div className="bar-selector-container">
-    <div className="bar-selector" style={{color: this.state.slideIndex == 1 ? "white" : "gray"}}>___</div>
-    <div className="bar-selector" style={{color: this.state.slideIndex == 2 ? "white" : "gray"}}>___</div>
-    <div className="bar-selector" style={{color: this.state.slideIndex == 3 ? "white" : "gray"}}>___</div>
-    <div className="bar-selector" style={{color: this.state.slideIndex == 4 ? "white" : "gray"}}>___</div>
-    <div className="bar-selector" style={{color: this.state.slideIndex == 5 ? "white" : "gray"}}>___</div>
+    <div className="bar-selector" style={{color: this.state.slideIndex == 1 ? "white" : "black"}}>__</div>
+    <div className="bar-selector"style={{color: this.state.slideIndex == 1 ? "white" : "black"}}>__</div>
+    <div className="bar-selector"style={{color: this.state.slideIndex == 1 ? "white" : "black"}}>__</div>
+    <div className="bar-selector"style={{color: this.state.slideIndex == 1 ? "white" : "black"}}>__</div>
+    <div className="bar-selector"style={{color: this.state.slideIndex == 1 ? "white" : "black"}}>__</div>
     </div>
 
     </div>

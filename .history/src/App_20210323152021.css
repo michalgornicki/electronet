@@ -312,18 +312,9 @@ h3{
   width: 100%;
 }
 
-.bar-selector-container{
-  position: absolute;
-  top: 46vh;
-  width: 60%;
-}
 
 .bar-selector{
-  position: relative;
-  font-size: 8vmin;
-  color: white;
-  display: inline-block;
-  margin: 0.2vmin;
+  position:relative
 }
 
 .bar-large{
