@@ -92,7 +92,7 @@ a {
 }
 
 .item:hover{
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(242, 242, 242);
   box-shadow: 0px 4px 20px rgb(129, 129, 129);
   transition: 0.3s;
 }
