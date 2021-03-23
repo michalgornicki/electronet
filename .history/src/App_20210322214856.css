@@ -167,7 +167,8 @@ h3{
 }
 
 .bar-slider{
-  position: relative;
+  position: absolute;
+  overflow: hidden;
 }
 
 .slide{

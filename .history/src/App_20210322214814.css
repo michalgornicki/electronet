@@ -164,6 +164,8 @@ h3{
   float: left;
   transition: 2s;
   cursor: pointer;
+  overflow: hidden;
+  display:inline-block;
 }
 
 .bar-slider{

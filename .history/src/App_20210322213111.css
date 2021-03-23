@@ -162,16 +162,16 @@ h3{
   background-size: cover;
   text-align: center;
   float: left;
-  transition: 2s;
+  transition: 1s;
   cursor: pointer;
 }
 
 .bar-slider{
   position: relative;
+  overflow: hidden;
 }
 
 .slide{
-  position: absolute;
   background-position: center;
 }
 

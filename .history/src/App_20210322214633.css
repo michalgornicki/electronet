@@ -164,6 +164,7 @@ h3{
   float: left;
   transition: 2s;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .bar-slider{
@@ -171,7 +172,7 @@ h3{
 }
 
 .slide{
-  position: absolute;
+  position: relative;
   background-position: center;
 }
 
