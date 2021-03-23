@@ -265,12 +265,13 @@ h3{
   margin-right: auto;
   transform: translate(0, -50%);
   padding: 1vmin;
+  border-bottom: 2px solid purple;
 }
 
 .bar-text-small{
   position: relative;
   width: 60%;
-  top: 75%;
+  top: 80%;
   margin-left: auto;
   margin-right: auto;
   font-size: 2.5vmin;

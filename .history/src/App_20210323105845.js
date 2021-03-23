@@ -310,6 +310,8 @@ class App extends Component {
           </div>
           }
 
+          
+
         <div><div className="cartClose" onClick={this.cartClose}>Zamknij</div></div>
         <div className="order-proceed" onClick={this.orderProceed}> Dostawa i płatność</div>
 
@@ -317,49 +319,6 @@ class App extends Component {
 
         <div className="delivery-cart">
 
-        <div className="delivery-content">
-
-        <h1 className="basket-title">Dostawa i płatność</h1>
-
-        <h1 className="delivery-title">1. Sposób dostawy</h1>
-        
-        <div className="delivery">
-        <h1><div className="delivery-type"><input type="radio" name="delivery"/> Kurier - InPost, UPS lub FedEx</div></h1>
-        <h1><div className="delivery-type"><input type="radio" name="delivery"/> Paczkomat inPost 24/7</div></h1>
-        <h1><div className="delivery-type"><input type="radio" name="delivery"/> Odbiór osobisty w salonie Electronet</div></h1>
-        <h1></h1>
-        </div>
-
-        <h1 className="delivery-title">2. Metoda płatności</h1>
-
-        <div className="delivery">
-        <h1><div className="delivery-type"><input type="radio" name="payment"/> Blik</div></h1>
-        <h1><div className="delivery-type"><input type="radio" name="payment"/> Karta płatnicza online</div></h1>
-        <h1><div className="delivery-type"><input type="radio" name="payment"/> Przelew gotówkowy</div></h1>
-        <h1><div className="delivery-type"><input type="radio" name="payment"/> Przy odbiorze</div></h1>
-        <h1><div className="delivery-type"><input type="radio" name="payment"/> Szybki przelew DotPay</div></h1>
-        </div>
-
-        <h1 className="delivery-title">3. Dane odbiorcy</h1>
-
-        <div className="delivery">
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Imię i nazwisko"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Ulica i numer"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Kod pocztowy"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Miejscowość"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="E-mail"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Telefon"/></form></h1>
-        </div>
-
-        <h1 className="delivery-title ">Zgody formalne</h1>
-
-        <h1 className="delivery-agree"><input type="checkbox" name="" id=""/> Akceptuję regulamin sklepu.</h1>
-        <h1 className="delivery-agree"><input type="checkbox" name="" id=""/> Chcę otrzymywać newsletter na podany adres e-mail.</h1>
-
-        <div className="cartClose" onClick={this.cartClose}>Wróć</div>
-        <div className="order-proceed" onClick={this.orderProceed}>Podsumowanie</div>
-
-        </div>
         </div>
 
         <div className="bar-large" alt=""> 

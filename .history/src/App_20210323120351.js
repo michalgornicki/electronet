@@ -351,10 +351,9 @@ class App extends Component {
         <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Telefon"/></form></h1>
         </div>
 
-        <h1 className="delivery-title ">Zgody formalne</h1>
+        <h1 className="delivery-title">Zgody formalne</h1>
 
-        <h1 className="delivery-agree"><input type="checkbox" name="" id=""/> Akceptuję regulamin sklepu.</h1>
-        <h1 className="delivery-agree"><input type="checkbox" name="" id=""/> Chcę otrzymywać newsletter na podany adres e-mail.</h1>
+        
 
         <div className="cartClose" onClick={this.cartClose}>Wróć</div>
         <div className="order-proceed" onClick={this.orderProceed}>Podsumowanie</div>

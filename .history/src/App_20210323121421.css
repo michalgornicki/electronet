@@ -270,10 +270,9 @@ h3{
 .bar-text-small{
   position: relative;
   width: 60%;
-  top: 75%;
+  top: 60%;
   margin-left: auto;
   margin-right: auto;
-  font-size: 2.5vmin;
 }
 
 .bar-text-large{

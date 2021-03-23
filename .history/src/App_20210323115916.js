@@ -343,18 +343,11 @@ class App extends Component {
         <h1 className="delivery-title">3. Dane odbiorcy</h1>
 
         <div className="delivery">
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Imię i nazwisko"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Ulica i numer"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Kod pocztowy"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Miejscowość"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="E-mail"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Telefon"/></form></h1>
+        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="imię i nazwisko"/></form></h1>
+        <h1 className="delivery-form"><form action=""><input type="aaa"/></form></h1>
+        <h1 className="delivery-form"><form action=""><input type="aaa"/></form></h1>
+        <h1 className="delivery-form"><form action=""><input type="aaa"/></form></h1>
         </div>
-
-        <h1 className="delivery-title ">Zgody formalne</h1>
-
-        <h1 className="delivery-agree"><input type="checkbox" name="" id=""/> Akceptuję regulamin sklepu.</h1>
-        <h1 className="delivery-agree"><input type="checkbox" name="" id=""/> Chcę otrzymywać newsletter na podany adres e-mail.</h1>
 
         <div className="cartClose" onClick={this.cartClose}>Wróć</div>
         <div className="order-proceed" onClick={this.orderProceed}>Podsumowanie</div>
