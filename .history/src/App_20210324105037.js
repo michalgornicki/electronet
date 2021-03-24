@@ -318,7 +318,7 @@ orderSummary = event => {
           <h1 className="cart-product-info">Gwarancja producenta: 24 miesiące</h1>
           <h1 className="cart-product-info">Produkt nowy</h1>
           <h1 className="cart-product-info">Waga: 500g</h1>
-          <h1 className="cart-product-info">3 raty RRSO 0% </h1>
+          <h1 className="cart-product-info">Kolor: czarny</h1>
           </div>
 
           <img className="cartPhoto" src={this.state.selectedPhoto} alt=""/>
