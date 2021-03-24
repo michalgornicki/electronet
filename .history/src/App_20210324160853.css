@@ -4,14 +4,8 @@ body{
 
 .App {
   position: relative;
-  display: none;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.spinner{
-  position: absolute;
-  top: 25%;
 }
 
 .main-header{
@@ -901,14 +895,14 @@ h3{
   position: fixed;
   top: 2.5%;
   user-select: none;
-  left: 12.5%;
+  left: 15%;
   background-color: rgb(255, 255, 255);
-  width: 75%;
+  width: 70%;
   height: 95%;
   box-shadow: 0px 0px 15px rgb(134, 134, 134);
+  display: none;
   border-radius: 5vmin;
   animation: 1s;
-  display: none;
   z-index: 3;
 }
 

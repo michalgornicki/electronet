@@ -134,7 +134,6 @@ class App extends Component {
 
   componentDidMount(){
     this.showSlides();
-    document.getElementsByClassName("App")[0].style.display="block";
   }
 
   orderProceed = event => {
@@ -177,70 +176,41 @@ class App extends Component {
         })
   }
 
-formValidation = event => {
-  console.log(this.state.selectedDelivery)
+orderSummary = event => {
   const input = document.getElementsByClassName("delivery-input")
-  const regulation = document.getElementById("regulation-accept")
   const error = document.getElementsByClassName("delivery-error")
 
   input[0].value.length < 6 ?
-  error[0].innerHTML="Imię i nazwisko powinno zawierać conajmniej 6 liter"
-  : 
-  error[0].innerHTML="&#9989;";
-  
+  error[0].style.display="inline-block"
+  : error[0].style.display="none"
 
-  input[1].value.length < 6 || !(input[1].value.match(".*\\d.*")) ?
-  error[1].innerHTML="Imię i nazwisko powinno zawierać conajmniej 6 liter"
-  : error[1].innerHTML="&#9989;";
+  input[1].value.length < 6 || !(input[1].value.match(".*\\dst.*")) ?
+  error[1].style.display="inline-block"
+  : error[1].style.display="none"
 
   input[2].value.length < 6 || input[2].value.match(".*\\dst.*") || !(input[2].value.includes("-")) ?
-  error[2].innerHTML="Wpisz prawidłowy kod pocztowy"
-  : 
-  error[2].innerHTML="&#9989;";
-
+  error[2].style.display="inline-block"
+  : error[2].style.display="none"
 
   input[3].value.length < 4 ?
-  error[3].innerHTML="Nazwa miejscowości powinna conajmniej 6 liter"
-  : error[3].innerHTML="&#9989;";
+  error[3].style.display="inline-block"
+  : error[3].style.display="none"
 
-  input[4].value.length < 4  || !(input[4].value.includes("@")) || !(input[4].value.includes(".")) ?
-  error[4].innerHTML="Wpisz prawidłowy adres e-mail"
-  : error[4].innerHTML="&#9989;";
+  input[4].value.length < 4  || !(input[4].value.includes("@.")) ?
+  error[4].style.display="inline-block"
+  : error[4].style.display="none"
 
   input[5].value.length < 9 || input[5].value.match(".*\\dst.*") ?
-  error[5].innerHTML="Wpisz prawidłowy numer telefonu (9 cyfr)"
-  : error[5].innerHTML="&#9989;";
+  error[5].style.display="inline-block"
+  : error[5].style.display="none"
 
-  !(regulation.checked) ?
-  error[6].innerHTML="Zaznacz zgodę aby dokonać zakupu."
-  : error[6].innerHTML="&#9989;";
 
 }
-
-orderSummary = event => {
-  const error = document.getElementsByClassName("delivery-error")
-
-  if (
-    error[0].innerHTML.length == 1 &&
-    error[1].innerHTML.length == 1 &&
-    error[2].innerHTML.length == 1 &&
-    error[3].innerHTML.length == 1 &&
-    error[4].innerHTML.length == 1 &&
-    error[5].innerHTML.length == 1 &&
-    error[6].innerHTML.length == 1 
-    )
-  {document.getElementsByClassName("summary-cart")[0].style.display="block";}
-  else 
-  {console.log("error")}
-}
-
 
   render(){
 
   return (
     <div className="App" >
-      <img src="spinner.gif" alt="" className="spinner"/>
-      <div className="app-container">
 
     <h1 className="main-header"> 
     <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> 
@@ -437,6 +407,7 @@ orderSummary = event => {
         <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectCourier}/> Kurier - InPost, UPS lub FedEx - 14.99 zł</div></h1>
         <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectInpost}/> Paczkomat inPost 24/7 9.99 zł</div></h1>
         <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectPickup}/> Odbiór osobisty w salonie Electronet - 0 zł</div></h1>
+        <h1></h1>
         </div>
 
         <h1 className="delivery-title">2. Metoda płatności</h1>
@@ -452,20 +423,18 @@ orderSummary = event => {
         <h1 className="delivery-title">3. Dane odbiorcy</h1>
 
         <div className="delivery">
-        <h1 className="delivery-form"><form action=""><input className="delivery-input" onChange={this.formValidation} type="aaa" placeholder="Imię i nazwisko"/><span className="delivery-error"></span></form> </h1> 
-        <h1 className="delivery-form"><form action=""><input className="delivery-input" onChange={this.formValidation} type="aaa" placeholder="Ulica i numer"/><span className="delivery-error"></span></form></h1>
-        <h1 className="delivery-form"><form action=""><input className="delivery-input" onChange={this.formValidation} maxLength="6" type="aaa" placeholder="Kod pocztowy"/><span className="delivery-error"></span></form></h1>
-        <h1 className="delivery-form"><form action=""><input className="delivery-input" onChange={this.formValidation} type="aaa" placeholder="Miejscowość"/><span className="delivery-error"></span></form></h1>
-        <h1 className="delivery-form"><form action=""><input className="delivery-input" onChange={this.formValidation} type="aaa" placeholder="E-mail"/><span className="delivery-error"></span></form></h1>
-        <h1 className="delivery-form"><form action=""><input className="delivery-input" onChange={this.formValidation} maxLength="9" type="aaa" placeholder="Telefon"/><span className="delivery-error"></span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" type="aaa" placeholder="Imię i nazwisko"/><span className="delivery-error">Imię i nazwisko powinno zawierać conajmniej 6 liter</span></form> </h1> 
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" type="aaa" placeholder="Ulica i numer"/><span className="delivery-error">Wpisz nazwę ulicy i numer mieszkania/domu</span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" maxLength="6" type="aaa" placeholder="Kod pocztowy"/><span className="delivery-error">Wpisz prawidłowy kod pocztowy</span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" type="aaa" placeholder="Miejscowość"/><span className="delivery-error">Nazwa miejscowości powinna conajmniej 6 liter</span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" type="aaa" placeholder="E-mail"/><span className="delivery-error">Wpisz prawidłowy adres e-mail</span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" maxLength="6" type="aaa" placeholder="Telefon"/><span className="delivery-error">Wpisz prawidłowy numer telefonu (9 cyfr)</span></form></h1>
         </div>
 
         <h1 className="delivery-title ">Zgody formalne</h1>
 
-        <h1 className="delivery-agree"><input type="checkbox" name="" id="regulation-accept" onChange={this.formValidation}/> Akceptuję regulamin sklepu. * <span className="delivery-error"></span></h1>
-        <h1 className="delivery-agree"><input type="checkbox" name="" id=""/> Chcę otrzymywać newsletter na podany adres e-mail. **</h1>
-        <h5 className="delivery-agree"> * Akceptacja regulaminu sklepu jest konieczna do dokonania zakupów.</h5>
-        <h5 className="delivery-agree"> ** Newsletter jest dobrowolny - zapisz się aby uzyskać 10% rabat na 3 pierwsze zakupy.</h5>
+        <h1 className="delivery-agree"><input type="checkbox" name="" id=""/> Akceptuję regulamin sklepu.</h1>
+        <h1 className="delivery-agree"><input type="checkbox" name="" id=""/> Chcę otrzymywać newsletter na podany adres e-mail.</h1>
 
           
 
@@ -473,15 +442,6 @@ orderSummary = event => {
         <div className="order-proceed" onClick={this.orderSummary}>Podsumowanie</div>
 
         </div>
-        </div>
-
-        <div className="summary-cart">
-
-        <h1 className="basket-title">Podsumowanie</h1>
-
-        <div><div className="cart-close" onClick={this.cartClose}>Wróć</div></div>
-        <div className="order-proceed" onClick={this.orderSummary}>Potwierdzenie zamówienia</div>
-
         </div>
 
         <div className="bar-large" alt=""> 
@@ -499,12 +459,9 @@ orderSummary = event => {
         <h1>Kontakt</h1>
         <h1>662-047-277</h1>
         <h1>electronet@electronet.pl</h1>
-        <h1>Regulamin sklepu</h1>
-        <h1>Wysyłka i zwrot</h1>
         </div>
         </div>
 
-    </div>
     </div>
   );
   }

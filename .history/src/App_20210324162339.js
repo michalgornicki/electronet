@@ -218,6 +218,8 @@ formValidation = event => {
 }
 
 orderSummary = event => {
+  const input = document.getElementsByClassName("delivery-input")
+  const regulation = document.getElementById("regulation-accept")
   const error = document.getElementsByClassName("delivery-error")
 
   if (

@@ -218,6 +218,8 @@ formValidation = event => {
 }
 
 orderSummary = event => {
+  const input = document.getElementsByClassName("delivery-input")
+  const regulation = document.getElementById("regulation-accept")
   const error = document.getElementsByClassName("delivery-error")
 
   if (
@@ -239,8 +241,7 @@ orderSummary = event => {
 
   return (
     <div className="App" >
-      <img src="spinner.gif" alt="" className="spinner"/>
-      <div className="app-container">
+      .app-container
 
     <h1 className="main-header"> 
     <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> 
@@ -504,7 +505,6 @@ orderSummary = event => {
         </div>
         </div>
 
-    </div>
     </div>
   );
   }

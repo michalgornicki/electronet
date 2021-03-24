@@ -134,7 +134,6 @@ class App extends Component {
 
   componentDidMount(){
     this.showSlides();
-    document.getElementsByClassName("App")[0].style.display="block";
   }
 
   orderProceed = event => {
@@ -218,20 +217,7 @@ formValidation = event => {
 }
 
 orderSummary = event => {
-  const error = document.getElementsByClassName("delivery-error")
-
-  if (
-    error[0].innerHTML.length == 1 &&
-    error[1].innerHTML.length == 1 &&
-    error[2].innerHTML.length == 1 &&
-    error[3].innerHTML.length == 1 &&
-    error[4].innerHTML.length == 1 &&
-    error[5].innerHTML.length == 1 &&
-    error[6].innerHTML.length == 1 
-    )
-  {document.getElementsByClassName("summary-cart")[0].style.display="block";}
-  else 
-  {console.log("error")}
+  
 }
 
 
@@ -239,8 +225,6 @@ orderSummary = event => {
 
   return (
     <div className="App" >
-      <img src="spinner.gif" alt="" className="spinner"/>
-      <div className="app-container">
 
     <h1 className="main-header"> 
     <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> 
@@ -434,9 +418,10 @@ orderSummary = event => {
         <h1 className="delivery-title">1. Sposób dostawy</h1>
         
         <div className="delivery">
+        <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectPickup}/> Odbiór osobisty w salonie Electronet - 0 zł</div></h1>
         <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectCourier}/> Kurier - InPost, UPS lub FedEx - 14.99 zł</div></h1>
         <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectInpost}/> Paczkomat inPost 24/7 9.99 zł</div></h1>
-        <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectPickup}/> Odbiór osobisty w salonie Electronet - 0 zł</div></h1>
+        <h1></h1>
         </div>
 
         <h1 className="delivery-title">2. Metoda płatności</h1>
@@ -475,15 +460,6 @@ orderSummary = event => {
         </div>
         </div>
 
-        <div className="summary-cart">
-
-        <h1 className="basket-title">Podsumowanie</h1>
-
-        <div><div className="cart-close" onClick={this.cartClose}>Wróć</div></div>
-        <div className="order-proceed" onClick={this.orderSummary}>Potwierdzenie zamówienia</div>
-
-        </div>
-
         <div className="bar-large" alt=""> 
           <div className="bar-text bar-text-large"> 
             <div className="bar-text-1">Zapisz się na Newsletter</div> 
@@ -504,7 +480,6 @@ orderSummary = event => {
         </div>
         </div>
 
-    </div>
     </div>
   );
   }
