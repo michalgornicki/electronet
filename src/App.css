@@ -487,16 +487,16 @@ h3{
   animation: 1s;
 }
 
-.cartTitle{
+.cart-title{
   font-size: 3.5vmin;
 }
 
-.cartPrice{
+.cart-price{
   font-size: 4vmin;
   color: rgb(255, 0, 0);
 }
 
-.cartPhoto{
+.cart-photo{
   position: relative;
   height: 55%;
   right: 10%;
@@ -509,7 +509,7 @@ h3{
   width: 40%;
 }
 
-.cartDescription{
+.cart-description{
   position: relative;
   left: 10%;
   width: 100%;
@@ -560,7 +560,7 @@ h3{
   transition: 0.3s;
 }
 
-.cartClose{
+.cart-close{
   position: absolute;
   bottom: 3%;
   left: 40%;
@@ -757,20 +757,19 @@ h3{
 
 .deleteItem{
   position: relative;
-  background-color: rgb(204, 204, 204);
+  background-color: rgb(0, 0, 0);
   color: white;
-  border-radius: 20vmin;
   left: 10vmin;
   display: inline-block;
-  height: 8vmin;
-  width: 8vmin;
-  line-height: 8vmin;
+  height: 6vmin;
+  width: 10vmin;
+  line-height: 6vmin;
   cursor: pointer;
   border: 1px solid rgb(196, 196, 196);
 }
 
 .deleteItem:hover{
-  background-color: rgb(153, 153, 153);
+  background-color: rgb(126, 126, 126);
 }
 
 .order-proceed:hover{
@@ -837,7 +836,7 @@ h3{
 
 .delivery{
   text-align: left;
-  width: 50%;
+  width: 100%;
   margin-left: 5vmin;
 }
 
@@ -852,7 +851,7 @@ h3{
 .delivery-form input{
   display: inline-block;
   padding: 1.7vmin;
-  width: 80%;
+  width: 50%;
   border-radius: 3vmin;
   border: 1px solid rgb(206, 206, 206);
   margin-bottom: 2vmin;
@@ -867,6 +866,12 @@ h3{
   text-align: left;
   margin-top: 2vmin;
   margin-left: 4vmin;
+}
+
+.delivery-error{
+  display: none;
+  margin-left: 2vmin;
+  color: red;
 }
 
 .basket-value{

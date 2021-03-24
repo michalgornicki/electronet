@@ -61,9 +61,9 @@ class App extends Component {
       basketSum: this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2),
       basketItems: this.state.basketItems + 1,
       myBasket: [...this.state.myBasket, {
-        title: event.target.parentElement.getElementsByClassName('cartTitle')[0].innerHTML, 
-        price: parseFloat(event.target.parentElement.getElementsByClassName('cartPrice')[0].innerHTML),
-        image: event.target.parentElement.getElementsByClassName('cartPhoto')[0].src,
+        title: event.target.parentElement.getElementsByClassName('cart-title')[0].innerHTML, 
+        price: parseFloat(event.target.parentElement.getElementsByClassName('cart-price')[0].innerHTML),
+        image: event.target.parentElement.getElementsByClassName('cart-photo')[0].src,
       }]
     });
 }
@@ -137,6 +137,9 @@ class App extends Component {
   }
 
   orderProceed = event => {
+    this.state.basketItems < 1 ?
+    console.log("error")
+    :
     document.getElementsByClassName("delivery-cart")[0].style.display="block";
   }
 
@@ -174,7 +177,34 @@ class App extends Component {
   }
 
 orderSummary = event => {
-  
+  const input = document.getElementsByClassName("delivery-input")
+  const error = document.getElementsByClassName("delivery-error")
+
+  input[0].value.length < 6 ?
+  error[0].style.display="inline-block"
+  : error[0].style.display="none"
+
+  input[1].value.length < 6 || !(input[1].value.match(".*\\dst.*")) ?
+  error[1].style.display="inline-block"
+  : error[1].style.display="none"
+
+  input[2].value.length < 6 || input[2].value.match(".*\\dst.*") || !(input[2].value.includes("-")) ?
+  error[2].style.display="inline-block"
+  : error[2].style.display="none"
+
+  input[3].value.length < 4 ?
+  error[3].style.display="inline-block"
+  : error[3].style.display="none"
+
+  input[4].value.length < 4  || !(input[4].value.includes("@.")) ?
+  error[4].style.display="inline-block"
+  : error[4].style.display="none"
+
+  input[5].value.length < 9 || input[5].value.match(".*\\dst.*") ?
+  error[5].style.display="inline-block"
+  : error[5].style.display="none"
+
+
 }
 
   render(){
@@ -310,20 +340,20 @@ orderSummary = event => {
 
         <div className="product-cart" onMouseLeave={() => document.getElementsByClassName("product-cart")[0].style.display="none"}>
         
-          <h1 className="cartTitle">{this.state.selectedProduct}</h1>
-          <h1 className="cartPrice">{this.state.selectedPrice} zł</h1>
-          <h1 className="cartAvailability">Dostępność: {this.state.selectedAvailability}</h1>
+          <h1 className="cart-title">{this.state.selectedProduct}</h1>
+          <h1 className="cart-price">{this.state.selectedPrice} zł</h1>
+          <h1 className="cart-availability">Dostępność: {this.state.selectedAvailability}</h1>
           <div className="cart-text">
-          <h1 className="cartDescription">{this.state.selectedDescription}</h1>
+          <h1 className="cart-description">{this.state.selectedDescription}</h1>
           <h1 className="cart-product-info">Gwarancja producenta: 24 miesiące</h1>
           <h1 className="cart-product-info">Produkt nowy</h1>
           <h1 className="cart-product-info">Waga: 500g</h1>
           <h1 className="cart-product-info">3 raty RRSO 0% </h1>
           </div>
 
-          <img className="cartPhoto" src={this.state.selectedPhoto} alt=""/>
+          <img className="cart-photo" src={this.state.selectedPhoto} alt=""/>
           <div className="add-to-cart-large" onClick={this.AddToBasketCart}><img className="cart" src="cart.png" alt=""/> Do koszyka</div>
-          <div><div className="cartClose" onClick={this.cartClose}>Zamknij</div></div>
+          <div><div className="cart-close" onClick={this.cartClose}>Zamknij</div></div>
 
         </div>
 
@@ -357,7 +387,7 @@ orderSummary = event => {
           </div>
           }
 
-        <div><div className="cartClose" onClick={this.cartClose}>Zamknij</div></div>
+        <div><div className="cart-close" onClick={this.cartClose}>Zamknij</div></div>
         <div className="order-proceed" onClick={this.orderProceed}> Dostawa i płatność</div>
 
         </div>
@@ -386,19 +416,19 @@ orderSummary = event => {
         <h1><div className="delivery-type"><input type="radio" name="payment"/> Blik</div></h1>
         <h1><div className="delivery-type"><input type="radio" name="payment"/> Karta płatnicza online</div></h1>
         <h1><div className="delivery-type"><input type="radio" name="payment"/> Przelew gotówkowy</div></h1>
-        <h1><div className="delivery-type"><input type="radio" name="payment"/> Przy odbiorze</div></h1>
         <h1><div className="delivery-type"><input type="radio" name="payment"/> Szybki przelew DotPay</div></h1>
+        <h1><div className="delivery-type"><input type="radio" name="payment"/> Przy odbiorze</div></h1>
         </div>
 
         <h1 className="delivery-title">3. Dane odbiorcy</h1>
 
         <div className="delivery">
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Imię i nazwisko"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Ulica i numer"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Kod pocztowy"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Miejscowość"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="E-mail"/></form></h1>
-        <h1 className="delivery-form"><form action=""><input type="aaa" placeholder="Telefon"/></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" type="aaa" placeholder="Imię i nazwisko"/><span className="delivery-error">Imię i nazwisko powinno zawierać conajmniej 6 liter</span></form> </h1> 
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" type="aaa" placeholder="Ulica i numer"/><span className="delivery-error">Wpisz nazwę ulicy i numer mieszkania/domu</span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" maxLength="6" type="aaa" placeholder="Kod pocztowy"/><span className="delivery-error">Wpisz prawidłowy kod pocztowy</span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" type="aaa" placeholder="Miejscowość"/><span className="delivery-error">Nazwa miejscowości powinna conajmniej 6 liter</span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" type="aaa" placeholder="E-mail"/><span className="delivery-error">Wpisz prawidłowy adres e-mail</span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" maxLength="6" type="aaa" placeholder="Telefon"/><span className="delivery-error">Wpisz prawidłowy numer telefonu (9 cyfr)</span></form></h1>
         </div>
 
         <h1 className="delivery-title ">Zgody formalne</h1>
@@ -408,7 +438,7 @@ orderSummary = event => {
 
           
 
-        <div className="cartClose" onClick={this.cartClose}>Wróć</div>
+        <div className="cart-close" onClick={this.cartClose}>Wróć</div>
         <div className="order-proceed" onClick={this.orderSummary}>Podsumowanie</div>
 
         </div>
