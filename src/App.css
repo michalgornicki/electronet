@@ -52,7 +52,8 @@ a {
 .header-cart{
   position: fixed;
   width: max-content;
-  line-height: 10vmin;
+  top: 1vmin;
+  line-height: 8vmin;
   font-size: 2vmin;
   background-color:rgb(255, 255, 255);
   color: black;
@@ -63,8 +64,7 @@ a {
   right: 0%;
   z-index: 1;
   box-shadow: 0px 0px 5px rgb(0, 0, 0);
-  border-bottom-left-radius: 3vmin;
-  border-bottom-right-radius: 3vmin;
+  border-radius: 2vmin;
   cursor: pointer;
 }
 
@@ -698,7 +698,7 @@ h3{
 .basket-items{
   overflow-Y: scroll;
   height: 400px;
-  width: 90%;
+  width: 70%;
 }
 
 .basket-item{
@@ -883,12 +883,12 @@ h3{
 }
 
 .basket-value{
-  position: relative;
-  top: 12%;
+  position: absolute;
+  top: 54%;
   right: 5%;
-  width: 30%;
+  width: 18%;
   padding: 4vmin;
-  background-color: rgb(206, 206, 206);
+  background-color: rgb(226, 226, 226);
   font-size: 3vmin;
   float: right;
 }
@@ -919,9 +919,9 @@ h3{
 
   .main-header{
   padding-left: 2vmin;
-  font-size: 6vmin;
-  height: 12vmin;
-  line-height: 12vmin;
+  font-size: 7vmin;
+  height: 15vmin;
+  line-height: 15vmin;
   }
 
   .search-product{
@@ -966,6 +966,7 @@ h3{
   .bar{
     width: 100%;
     margin-left: 0;
+    margin-top: 0;
   }
 
   .bar-small{
@@ -974,12 +975,25 @@ h3{
 
   .bar-slider{
     position: relative;
-    margin-bottom: 100vmin;
+  }
+
+  .bar-container{
+    width: 100%;
+    height: 430px;
+    left: 0%;
+    margin-top: 0%;
   }
 
   .bar-text{
     font-size: 6vmin;
     width: 80%;
+  }
+
+  .bar-selector-container{
+    position: absolute;
+    top: 46vh;
+    width: 60%;
+    left: 20%;
   }
   
   .button-bar{
@@ -995,4 +1009,57 @@ h3{
     font-size: 7vmin;
     margin-left: 2vmin;
 }
+
+.header-cart{
+  font-size: 5vmin;
+  height: 12vmin;
+  line-height: 12vmin;
+}
+
+.button-category{
+  font-size: 6vmin;
+  width: 80%;
+}
+
+.category-icon{
+  height: 6vmin;
+}
+
+.button-price-sort{
+  width: 40%;
+  font-size: 6vmin;
+}
+
+.min-price, .max-price{
+  font-size: 6vmin;
+  width: 40%;
+  height: 12vmin;
+}
+
+.item{
+
+}
+
+h1{
+  font-weight: 500;
+  margin-bottom: 6vmin;
+}
+
+h2{
+  font-size: 4vmin;
+  font-weight: 700;
+  color: red;
+}
+
+h3{
+  font-size: 4vmin;
+  font-weight: 500;
+  color: rgb(145, 145, 145);
+}
+
+.add-to-cart{
+  font-size: 3vmin;
+  padding: 2.5vmin;
+}
+
 }

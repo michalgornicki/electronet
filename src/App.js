@@ -399,6 +399,10 @@ orderSummary = event => {
           {this.state.myBasket.length > 0  ? 
           <div>
           <h1 className="basket-title">Twój koszyk</h1>
+
+          <h1 className="basket-value">Razem do zapłaty: {this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2)} zł</h1>
+
+
             <div className="basket-items">
               {this.state.myBasket
               .map(basketItem =>{
@@ -410,11 +414,12 @@ orderSummary = event => {
                   <div className="basket-item-index"> {this.state.myBasket.indexOf(basketItem)} </div>
                   <div onClick={this.deleteItem} className="deleteItem">Usuń</div>
                   </li>
-
               )
               }
               )}
             </div>
+
+
             </div>
 
           :
@@ -435,7 +440,7 @@ orderSummary = event => {
 
         <h1 className="basket-title">Dostawa i płatność</h1>
 
-        <h1 className="basket-value">Wartość koszyka: {this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2)} zł</h1>
+        <h1 className="basket-value">Razem do zapłaty: {this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2)} zł</h1>
 
 
         <h1 className="delivery-title">1. Sposób dostawy</h1>
