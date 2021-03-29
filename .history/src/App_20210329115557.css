@@ -405,6 +405,7 @@ h3{
   cursor: pointer;
   background-color: rgb(245, 245, 245);
   border-bottom: solid 2px rgb(255, 255, 255);
+  color: rgb(138, 138, 138);
 }
 
 .category-icon{

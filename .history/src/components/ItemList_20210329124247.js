@@ -9,14 +9,14 @@ const ItemList = props => {
         <div className="items-container">
         {data
         
-        .filter(element => props.itemData.category.includes(element.category))
+        .filter(element => this.props.itemData.category.includes(element.category))
 
-        .filter(element => parseFloat(element.price) < props.itemData.maxPrice && parseFloat(element.price) > props.itemData.minPrice)
+        .filter(element => parseFloat(element.price) < this.props.itemData.maxPrice && parseFloat(element.price) > this.props.itemData.minPrice)
         
-        .filter(element => element.title.toLowerCase().includes(props.itemData.searchInput))
+        .filter(element => element.title.toLowerCase().includes(this.props.itemData.searchInput))
 
         .sort((a, b) => {
-          if (props.itemData.priceSort === "ascending")
+          if (this.props.itemData.priceSort === "ascending")
           {return (parseFloat(a.price) - parseFloat(b.price));}
           else 
           {return (parseFloat(b.price) - parseFloat(a.price));}
@@ -25,13 +25,13 @@ const ItemList = props => {
         .map(product =>{
         return(
         <div className="item" key={data.id} >
-          <img className="item-image" src={product.image} alt="" onClick={props.ClickProduct}/>
-          <h1 className="title" onClick={props.ClickProduct}>{product.title}</h1>
+          <img className="item-image" src={product.image} alt="" onClick={product.ClickProduct}/>
+          <h1 className="title" onClick={product.ClickProduct}>{product.title}</h1>
           <h3 className="availability">{product.availability}</h3>
           <h2 className="price">{product.price}</h2>
           <h2 className="category">{product.category}</h2>
           <h2 className="description">{product.description}</h2>
-          <div className="add-to-cart" onClick={props.AddToBasket}> Do koszyka</div>
+          <div className="add-to-cart" onClick={product.AddToBasket}> Do koszyka</div>
         </div>
         )})
         }

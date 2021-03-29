@@ -31,7 +31,7 @@ const ItemList = props => {
           <h2 className="price">{product.price}</h2>
           <h2 className="category">{product.category}</h2>
           <h2 className="description">{product.description}</h2>
-          <div className="add-to-cart" onClick={props.AddToBasket}> Do koszyka</div>
+          <div className="add-to-cart" onClick={product.AddToBasket}> Do koszyka</div>
         </div>
         )})
         }

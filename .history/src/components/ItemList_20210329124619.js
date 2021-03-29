@@ -25,13 +25,13 @@ const ItemList = props => {
         .map(product =>{
         return(
         <div className="item" key={data.id} >
-          <img className="item-image" src={product.image} alt="" onClick={props.ClickProduct}/>
-          <h1 className="title" onClick={props.ClickProduct}>{product.title}</h1>
+          <img className="item-image" src={product.image} alt="" onClick={product.ClickProduct}/>
+          <h1 className="title" onClick={product.ClickProduct}>{product.title}</h1>
           <h3 className="availability">{product.availability}</h3>
           <h2 className="price">{product.price}</h2>
           <h2 className="category">{product.category}</h2>
           <h2 className="description">{product.description}</h2>
-          <div className="add-to-cart" onClick={props.AddToBasket}> Do koszyka</div>
+          <div className="add-to-cart" onClick={this.AddToBasket}> Do koszyka</div>
         </div>
         )})
         }

@@ -9,6 +9,7 @@ import React, { Component } from 'react';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.ClickProduct = this.ClickProduct.bind(this);
     this.state = {
       category: "memory disk accesories graphic sound laptops monitors",
       priceSort: "ascending",
@@ -344,7 +345,7 @@ orderSummary = event => {
     <h1 className="header">Polecamy</h1>
 
 
-    <ItemList itemData={this.state} ClickProduct={this.ClickProduct} AddToBasket={this.AddToBasket}/>
+    <ItemList />
 
         <div className="product-cart" onMouseLeave={() => document.getElementsByClassName("product-cart")[0].style.display="none"}>
         

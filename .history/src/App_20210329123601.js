@@ -344,7 +344,7 @@ orderSummary = event => {
     <h1 className="header">Polecamy</h1>
 
 
-    <ItemList itemData={this.state} ClickProduct={this.ClickProduct} AddToBasket={this.AddToBasket}/>
+    <ItemList itemData={this.state}/>
 
         <div className="product-cart" onMouseLeave={() => document.getElementsByClassName("product-cart")[0].style.display="none"}>
         

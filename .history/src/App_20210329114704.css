@@ -105,7 +105,7 @@ a {
 
 .item:hover{
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 4px 20px rgb(160, 160, 160);
+  box-shadow: 0px 4px 20px rgb(129, 129, 129);
   transition: 0.3s;
 }
 
@@ -429,7 +429,8 @@ h3{
 
 .button-category:focus {
   outline: 0;
-  border-bottom: solid 2px rgb(255, 255, 255);
+  color: rgb(211, 18, 250);
+  border-bottom: solid 2px rgb(211, 18, 250);
 }
 
 .button-category:hover{
@@ -440,13 +441,16 @@ h3{
 
 #ascending, #descending{
   border-radius: 0;
-  border-bottom: solid 2px rgb(255, 255, 255);
 }
 
 #ascending:hover, #descending:hover{
   color: rgb(211, 18, 250);
   border-bottom: solid 2px rgb(211, 18, 250);
   transition: 0.3s;
+}
+
+{
+  border-radius: 0;
 }
 
 .bottom-container{
