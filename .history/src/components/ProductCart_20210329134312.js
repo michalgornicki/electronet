@@ -1,0 +1,8 @@
+import React from 'react';
+import data from '../data';
+
+const ProductCart = props => {
+
+}
+
+export default ProductCart;

@@ -1,0 +1,371 @@
+import './App.css';
+import data from './data.json';
+import ItemList from './components/ItemList';
+import ProductCart from './components/ProductCart';
+import BasketCart from './components/BasketCart';
+import SummaryCart from './components/SummaryCart';
+import PromotionBars from './components/PromotionBars';
+import Buttons from './components/Buttons';
+
+import Item from './components/Item';
+import { render } from '@testing-library/react';
+import React, { Component } from 'react';
+
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      category: "memory disk accesories graphic sound laptops monitors",
+      priceSort: "ascending",
+      basketItems: 0,
+      basketSum: 0,
+      selectedProduct: 0,
+      selectedPrice: 0,
+      selectedAvailability: 0,
+      selectedCategory: 0,
+      selectedDescription: 0,
+      selectedPhoto: 0,
+      showBars: true,
+      myBasket: [],
+      minPrice: 0,
+      maxPrice: 3000,
+      searchInput: "",
+      slideIndex: "1",
+      selectedDelivery: "",
+    };
+  }
+  
+
+  ChooseCategory = event => {
+    event.target.id == "wszystko" ? 
+    this.setState({ category: "memory disk accesories graphic sound laptops monitors" })
+    :
+
+    this.setState({ category: event.target.id })
+    console.log(event.target.id)
+  };
+
+  PriceSort = event => {
+    this.setState({ priceSort: event.target.id });
+    console.log(event.target.id);
+  };
+
+  
+  AddToBasket = event => {
+    this.setState({
+      basketSum: this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2),
+      basketItems: this.state.basketItems + 1,
+      myBasket: [...this.state.myBasket, {
+        title: event.target.parentElement.getElementsByClassName('title')[0].innerHTML, 
+        price: parseFloat(event.target.parentElement.getElementsByClassName('price')[0].innerHTML),
+        image: event.target.parentElement.getElementsByClassName('item-image')[0].src,
+      }]
+    });  
+    console.log(this.state.basketSum) 
+  }
+
+  AddToBasketCart = event => {
+    console.log(this.state.myBasket)
+    this.setState({
+      basketSum: this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2),
+      basketItems: this.state.basketItems + 1,
+      myBasket: [...this.state.myBasket, {
+        title: event.target.parentElement.getElementsByClassName('cart-title')[0].innerHTML, 
+        price: parseFloat(event.target.parentElement.getElementsByClassName('cart-price')[0].innerHTML),
+        image: event.target.parentElement.getElementsByClassName('cart-photo')[0].src,
+      }]
+    });
+}
+
+  ClickProduct = event => {
+    document.getElementsByClassName("product-cart")[0].style.display="block";
+
+    this.setState({
+      selectedProduct: event.target.parentElement.getElementsByClassName('title')[0].innerHTML,
+      selectedPrice: parseFloat(event.target.parentElement.getElementsByClassName('price')[0].innerHTML),
+      selectedAvailability: event.target.parentElement.getElementsByClassName('availability')[0].innerHTML,
+      selectedCategory: event.target.parentElement.getElementsByClassName('category')[0].innerHTML,
+      selectedDescription: event.target.parentElement.getElementsByClassName('description')[0].innerHTML,
+      selectedPhoto: event.target.parentElement.getElementsByClassName('item-image')[0].src,
+      selectedBasket: 0
+    })
+  }
+
+  cartClose = event => {
+    event.target.parentElement.parentElement.style.display="none";
+  }
+
+  searchProduct = event => {
+    document.getElementsByClassName("min-price")[0].value = 0;  
+    document.getElementsByClassName("max-price")[0].value = 3000;  
+    this.setState({
+      searchInput: document.getElementsByClassName("search-product-input")[0].value,
+      minPrice: 0,
+      maxPrice: 3000,
+    });
+  }
+
+  clickBasket = event => {
+    document.getElementsByClassName("basket-cart")[0].style.display="block";
+  }
+
+  setMinPrice = event => {
+    this.setState({
+      minPrice: event.target.value,
+    })
+  }
+
+  setMaxPrice = event => {
+    this.setState({
+      maxPrice: event.target.value,
+    })
+  }
+
+  deleteItem = event => {
+    console.log(event.target.parentElement.getElementsByClassName("basket-item-index")[0].innerHTML)
+    let filteredArray = this.state.myBasket;
+    filteredArray.splice(event.target.parentElement.getElementsByClassName("basket-item-index")[0].innerHTML, 1);
+    this.setState({
+      myBasket: filteredArray,
+      basketItems: this.state.basketItems - 1,
+    })
+  }
+
+  showSlides = event => {
+    setInterval(() => {
+      this.setState({
+        slideIndex: this.state.slideIndex < 5 ? parseFloat(this.state.slideIndex) + 1 : 1,
+      })
+      console.log(this.state.slideIndex)
+    }, 4000);
+    
+  }
+
+  componentDidMount(){
+    this.showSlides();
+    document.getElementsByClassName("app-container")[0].style.display="block";
+    document.getElementsByClassName("spinner")[0].style.display="none";
+  }
+
+  componentWillUnmount(){
+    document.getElementsByClassName("app-container")[0].style.display="none";
+    document.getElementsByClassName("spinner")[0].style.display="block";
+  }
+
+  componentDidUpdate(){
+    document.getElementsByClassName("app-container")[0].style.display="block";
+    document.getElementsByClassName("spinner")[0].style.display="none";
+  }
+
+  orderProceed = event => {
+    this.state.basketItems < 1 ?
+    console.log("error")
+    :
+    document.getElementsByClassName("delivery-cart")[0].style.display="block";
+  }
+
+  selectCourier = event => {
+    this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2) < 151 ?
+    this.setState({
+      selectedDelivery: 15
+    })
+    : 
+    this.setState({
+      selectedDelivery: 0
+    })
+    
+  }
+
+    selectInpost = event => {
+      this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2) < 151 ?
+    this.setState({
+      selectedDelivery: "10"
+    })
+    : 
+    this.setState({
+      selectedDelivery: 0
+    })
+    }
+
+    selectPickup = event => {
+        this.setState({
+          selectedDelivery: "0"
+        })
+  }
+
+formValidation = event => {
+  console.log(this.state.selectedDelivery)
+  const input = document.getElementsByClassName("delivery-input")
+  const regulation = document.getElementById("regulation-accept")
+  const error = document.getElementsByClassName("delivery-error")
+
+  input[0].value.length < 6 ?
+  error[0].innerHTML="Imię i nazwisko powinno zawierać conajmniej 6 liter"
+  : 
+  error[0].innerHTML="&#9989;";
+  
+
+  input[1].value.length < 6 || !(input[1].value.match(".*\\d.*")) ?
+  error[1].innerHTML="Imię i nazwisko powinno zawierać conajmniej 6 liter"
+  : error[1].innerHTML="&#9989;";
+
+  input[2].value.length < 6 || input[2].value.match(".*\\dst.*") || !(input[2].value.includes("-")) ?
+  error[2].innerHTML="Wpisz prawidłowy kod pocztowy"
+  : 
+  error[2].innerHTML="&#9989;";
+
+
+  input[3].value.length < 4 ?
+  error[3].innerHTML="Nazwa miejscowości powinna conajmniej 6 liter"
+  : error[3].innerHTML="&#9989;";
+
+  input[4].value.length < 4  || !(input[4].value.includes("@")) || !(input[4].value.includes(".")) ?
+  error[4].innerHTML="Wpisz prawidłowy adres e-mail"
+  : error[4].innerHTML="&#9989;";
+
+  input[5].value.length < 9 || input[5].value.match(".*\\dst.*") ?
+  error[5].innerHTML="Wpisz prawidłowy numer telefonu (9 cyfr)"
+  : error[5].innerHTML="&#9989;";
+
+  !(regulation.checked) ?
+  error[6].innerHTML="Zaznacz zgodę aby dokonać zakupu."
+  : error[6].innerHTML="&#9989;";
+
+}
+
+orderSummary = event => {
+  const error = document.getElementsByClassName("delivery-error")
+
+  if (
+    error[0].innerHTML.length == 1 &&
+    error[1].innerHTML.length == 1 &&
+    error[2].innerHTML.length == 1 &&
+    error[3].innerHTML.length == 1 &&
+    error[4].innerHTML.length == 1 &&
+    error[5].innerHTML.length == 1 &&
+    error[6].innerHTML.length == 1 
+    )
+  {document.getElementsByClassName("summary-cart")[0].style.display="block";}
+  else 
+  {console.log("error")}
+}
+
+
+  render(){
+
+  return (
+    <div className="App" >
+      <img src="spinner.gif" alt="" className="spinner"/>
+      <div className="app-container">
+
+    <h1 className="main-header"> 
+    <a href="index.html"><div className="main-header-text">ELECTRONET</div></a> 
+    
+    <div className="header-cart" onClick={this.clickBasket}>
+    <img className="cart-icon-medium" src="cart.png" alt=""/> ({this.state.basketItems}) {this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2)}  zł
+    </div> 
+    </h1>
+
+    <form className="search-product" action=""> 
+    <input className="search-product-input" type="text" placeholder="Czego szukasz?" onChange={console.log("aaa")}/>
+    <div className="search-product-button" type="submit" onClick={this.searchProduct}>SZUKAJ</div>
+    </form>
+
+
+
+
+    <h1 className="header">Polecamy</h1>
+
+    <PromotionBars StateData={this.state}/>
+    <ItemList StateData={this.state} ClickProduct={this.ClickProduct} AddToBasket={this.AddToBasket}/>
+    <ProductCart StateData={this.state} AddToBasketCart={this.AddToBasketCart} cartClose={this.cartClose}/>
+    <BasketCart StateData={this.state} cartClose={this.cartClose} deleteItem={this.deleteItem} orderProceed={this.orderProceed}/>
+    <SummaryCart cartClose={this.cartClose}/>
+    <Buttons ChooseCategory={this.ChooseCategory} PriceSort={this.PriceSort} setMinPrice={this.setMinPrice} setMaxPrice={this.setMaxPrice}/>
+
+        
+
+        
+
+      <div className="delivery-cart">
+
+        <div className="delivery-content">
+
+        <h1 className="basket-title">Dostawa i płatność</h1>
+
+        <h1 className="basket-value">Razem do zapłaty: {this.state.myBasket.reduce((acc, array) => acc + array.price, 0).toFixed(2)} zł</h1>
+
+
+        <h1 className="delivery-title">1. Sposób dostawy</h1>
+        
+        <div className="delivery">
+        <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectCourier}/> Kurier - InPost, UPS lub FedEx - 14.99 zł</div></h1>
+        <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectInpost}/> Paczkomat inPost 24/7 9.99 zł</div></h1>
+        <h1><div className="delivery-type"><input type="radio" name="delivery" onClick={this.selectPickup}/> Odbiór osobisty w salonie Electronet - 0 zł</div></h1>
+        </div>
+
+        <h1 className="delivery-title">2. Metoda płatności</h1>
+
+        <div className="delivery">
+        <h1><div className="delivery-type"><input type="radio" name="payment"/> Blik</div></h1>
+        <h1><div className="delivery-type"><input type="radio" name="payment"/> Karta płatnicza online</div></h1>
+        <h1><div className="delivery-type"><input type="radio" name="payment"/> Przelew gotówkowy</div></h1>
+        <h1><div className="delivery-type"><input type="radio" name="payment"/> Szybki przelew DotPay</div></h1>
+        <h1><div className="delivery-type"><input type="radio" name="payment"/> Przy odbiorze</div></h1>
+        </div>
+
+        <h1 className="delivery-title">3. Dane odbiorcy</h1>
+
+        <div className="delivery">
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" onChange={this.formValidation} type="aaa" placeholder="Imię i nazwisko"/><span className="delivery-error"></span></form> </h1> 
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" onChange={this.formValidation} type="aaa" placeholder="Ulica i numer"/><span className="delivery-error"></span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" onChange={this.formValidation} maxLength="6" type="aaa" placeholder="Kod pocztowy"/><span className="delivery-error"></span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" onChange={this.formValidation} type="aaa" placeholder="Miejscowość"/><span className="delivery-error"></span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" onChange={this.formValidation} type="aaa" placeholder="E-mail"/><span className="delivery-error"></span></form></h1>
+        <h1 className="delivery-form"><form action=""><input className="delivery-input" onChange={this.formValidation} maxLength="9" type="aaa" placeholder="Telefon"/><span className="delivery-error"></span></form></h1>
+        </div>
+
+        <h1 className="delivery-title ">Zgody formalne</h1>
+
+        <h1 className="delivery-agree"><input type="checkbox" name="" id="regulation-accept" onChange={this.formValidation}/> Akceptuję regulamin sklepu. * <span className="delivery-error"></span></h1>
+        <h1 className="delivery-agree"><input type="checkbox" name="" id=""/> Chcę otrzymywać newsletter na podany adres e-mail. **</h1>
+        <h5 className="delivery-agree"> * Akceptacja regulaminu sklepu jest konieczna do dokonania zakupów.</h5>
+        <h5 className="delivery-agree"> ** Newsletter jest dobrowolny - zapisz się aby uzyskać 10% rabat na 3 pierwsze zakupy.</h5>
+
+          
+
+        <div className="cart-close" onClick={this.cartClose}>Wróć</div>
+        <div className="order-proceed" onClick={this.orderSummary}>Podsumowanie</div>
+
+        </div>
+        </div>
+
+        <div className="bar-large" alt=""> 
+          <div className="bar-text bar-text-large"> 
+            <div className="bar-text-1">Zapisz się na Newsletter</div> 
+            <div className="bar-text-2 bar-text-2-large">i odbierz 10% rabatu </div> 
+            <div className="bar-text-3">na trzy pierwsze produkty</div>
+            <form className="newsletter-form" action=""><input className="newsletter-input" type="text" placeholder="wpisz swój adres e-mail"/><button className="newsletter-button">Zapisz się</button></form>
+          </div>
+
+      </div>
+
+        <div className="bottom-container">
+        <div className="bottom-container-text">
+        <h1>Kontakt</h1>
+        <h1>662-047-277</h1>
+        <h1>electronet@electronet.pl</h1>
+        <h1>Regulamin sklepu</h1>
+        <h1>Wysyłka i zwrot</h1>
+        </div>
+        </div>
+
+    </div>
+    </div>
+  );
+  }
+}
+
+export default App;
+

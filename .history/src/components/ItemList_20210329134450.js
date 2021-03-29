@@ -7,9 +7,6 @@ const ItemList = props => {
 
     return(
         <div className="items-container">
-
-        <h1 className="header">Polecamy</h1>
-
         {data
         
         .filter(element => props.StateData.category.includes(element.category))
