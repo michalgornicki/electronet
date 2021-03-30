@@ -302,9 +302,13 @@ class App extends Component {
       <div className="App">
         <img src="spinner.gif" alt="" className="spinner" />
         <div className="app-container">
-          <MainBar StateData={this.state} clickBasket={this.clickBasket} />
-          <SearchBar searchProduct={this.searchProduct} />
-          <PromotionBars StateData={this.state} />
+          <MainBar 
+            StateData={this.state} 
+            clickBasket={this.clickBasket} />
+          <SearchBar 
+            searchProduct={this.searchProduct} />
+          <PromotionBars 
+            StateData={this.state} />
           <Buttons
             ChooseCategory={this.ChooseCategory}
             PriceSort={this.PriceSort}

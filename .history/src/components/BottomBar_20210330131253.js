@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NewsletterBar = props => {
+const BottomBar = props => {
 
     return(
     
@@ -25,4 +25,4 @@ const NewsletterBar = props => {
     )
 }
 
-export default NewsletterBar;
+export default BottomBar;

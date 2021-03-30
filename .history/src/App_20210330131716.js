@@ -302,8 +302,25 @@ class App extends Component {
       <div className="App">
         <img src="spinner.gif" alt="" className="spinner" />
         <div className="app-container">
-          <MainBar StateData={this.state} clickBasket={this.clickBasket} />
-          <SearchBar searchProduct={this.searchProduct} />
+          
+
+          <form className="search-product" action="">
+            <input
+              className="search-product-input"
+              type="text"
+              placeholder="Czego szukasz?"
+              onChange={console.log("aaa")}
+            />
+            <div
+              className="search-product-button"
+              type="submit"
+              onClick={this.searchProduct}
+            >
+              SZUKAJ
+            </div>
+          </form>
+          <MainBar />
+          <SearchBar />
           <PromotionBars StateData={this.state} />
           <Buttons
             ChooseCategory={this.ChooseCategory}
