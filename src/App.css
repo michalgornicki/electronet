@@ -13,7 +13,7 @@ body {
 }
 
 .app-container {
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(240, 240, 240);
 }
 
 .up{
@@ -26,24 +26,30 @@ body {
 
 .main-header {
   position: relative;
-  font-size: 4vmin;
-  font-weight: 700;
+  font-size: 5vmin;
   text-align: left;
   height: 10vmin;
   margin: 0;
-  padding-left: 9vmin;
   line-height: 10vmin;
-  background: linear-gradient(45deg, rgba(109, 10, 223, 0.6), rgba(224, 39, 193, 0.6), rgba(109, 10, 223, 0.6));
+  background-color: white;
   color: rgb(255, 255, 255);
-  box-shadow: 0px 0px 25px rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(200, 200, 200);
   z-index: 0;
 }
 
 .main-header-text {
-  width: 200px;
+  position: relative;
+  width:fit-content;
   float: left;
   letter-spacing: 0.3vmin;
-  filter: drop-shadow(3px 3px 2px black);
+  background-color: white;
+  color: rgb(201, 0, 219);
+  letter-spacing: 0.1vmin;
+  font-weight: 700;
+  height: 10vmin;
+  line-height: 10vmin;
+  padding-left: 1vmin;
+  padding-right: 1vmin;
 }
 
 a {
@@ -58,14 +64,14 @@ a {
   line-height: 8vmin;
   font-size: 2.5vmin;
   background-color: rgb(255, 255, 255);
-  color: black;
+  color: rgb(0, 0, 0);
   margin-right: 4vmin;
   padding-left: 1vmin;
   padding-right: 1vmin;
   float: right;
   right: 0%;
   z-index: 1;
-  box-shadow: 0px 0px 5px rgb(0, 0, 0);
+  border: 1px solid rgb(200, 200, 200);
   border-radius: 2vmin;
   cursor: pointer;
 }
@@ -87,7 +93,7 @@ a {
   padding-top: 5vmin;
   margin-top: 2vmin;
   margin-bottom: 2vmin;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(240, 240, 240);
 }
 
 .item {
@@ -267,10 +273,10 @@ h3 {
 .bar-text {
   position: relative;
   font-weight: 500;
-  font-size: 3.5vmin;
-  color: white;
+  font-size: 3vmin;
+  color: rgba(163, 0, 212, 0.993);
   width: fit-content;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   top: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -292,7 +298,7 @@ h3 {
 .bar-text-large {
   top: 50%;
   width: 100%;
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(240, 240, 240);
   padding: 0;
   padding-top: 2vmin;
   padding-bottom: 2vmin;
@@ -446,6 +452,7 @@ h3 {
   height: 200px;
   width: 100%;
   background-color: rgb(150, 150, 150);
+  color: rgb(255, 255, 255);
   text-align: left;
 }
 
@@ -601,7 +608,7 @@ h3 {
   margin: 0;
   font-size: 2vmin;
   font-weight: 300;
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(200, 200, 200);
 }
 
 .search-product-input:focus {
@@ -623,7 +630,7 @@ h3 {
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(200, 200, 200);
 }
 
 .search-product-button:hover {
@@ -918,10 +925,24 @@ h3 {
 
 @media only screen and (max-width: 600px) {
   .main-header {
-    padding-left: 2vmin;
     font-size: 7vmin;
     height: 15vmin;
     line-height: 15vmin;
+  }
+
+  .main-header-text {
+    position: relative;
+    width:fit-content;
+    float: left;
+    letter-spacing: 0.3vmin;
+    background-color: white;
+    color: rgb(201, 0, 219);
+    letter-spacing: 0.1vmin;
+    font-weight: 700;
+    height: 15vmin;
+    line-height: 15vmin;
+    padding-left: 1vmin;
+    padding-right: 1vmin;
   }
 
   .search-product {

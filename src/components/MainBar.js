@@ -5,7 +5,7 @@ const MainBar = (props) => {
     <div>
       <h1 className="main-header">
         <a href="index.html">
-          <div className="main-header-text">ELECTRONET</div>
+          <div className="main-header-text">electronet.pl</div>
         </a>
       </h1>
 
