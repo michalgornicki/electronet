@@ -9,6 +9,7 @@ body {
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
+  user-select: none;
 }
 
 .app-container {
@@ -1013,7 +1014,7 @@ h3 {
     font-size: 4vmin;
     height: 13vmin;
     line-height: 13vmin;
-    z-index: 13;
+    z-index: 2;
   }
 
   .button-category {
