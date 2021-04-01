@@ -59,11 +59,10 @@ const PromotionBars = (props) => {
         </div>
 
         <div className="bar-selector-container">
-          <div className="bar-selector-content">
           <div
             className="bar-selector"
             style={{
-              color: props.StateData.slideIndex == 1 ? "white" : "rgb(200, 200, 200)",
+              color: props.StateData.slideIndex == 1 ? "white" : "gray",
             }}
           >
             _
@@ -71,7 +70,7 @@ const PromotionBars = (props) => {
           <div
             className="bar-selector"
             style={{
-              color: props.StateData.slideIndex == 2 ? "white" : "rgb(200, 200, 200)",
+              color: props.StateData.slideIndex == 2 ? "white" : "gray",
             }}
           >
             _
@@ -79,7 +78,7 @@ const PromotionBars = (props) => {
           <div
             className="bar-selector"
             style={{
-              color: props.StateData.slideIndex == 3 ? "white" : "rgb(200, 200, 200)",
+              color: props.StateData.slideIndex == 3 ? "white" : "gray",
             }}
           >
             _
@@ -87,7 +86,7 @@ const PromotionBars = (props) => {
           <div
             className="bar-selector"
             style={{
-              color: props.StateData.slideIndex == 4 ? "white" : "rgb(200, 200, 200)",
+              color: props.StateData.slideIndex == 4 ? "white" : "gray",
             }}
           >
             _
@@ -95,12 +94,11 @@ const PromotionBars = (props) => {
           <div
             className="bar-selector"
             style={{
-              color: props.StateData.slideIndex == 5 ? "white" : "rgb(200, 200, 200)",
+              color: props.StateData.slideIndex == 5 ? "white" : "gray",
             }}
           >
             _
           </div>
-        </div>
         </div>
       </div>
 

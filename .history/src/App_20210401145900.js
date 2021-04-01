@@ -158,12 +158,12 @@ class App extends Component {
   searchProduct = (event) => {
     window.scrollTo(0, 820);
     document.getElementsByClassName("min-price")[0].value = 0;
-    document.getElementsByClassName("max-price")[0].value = 10000;
+    document.getElementsByClassName("max-price")[0].value = 3000;
     this.setState({
       searchInput: document.getElementsByClassName("search-product-input")[0]
         .value,
       minPrice: 0,
-      maxPrice: 10000,
+      maxPrice: 3000,
     });
   };
 
