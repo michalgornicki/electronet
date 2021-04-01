@@ -56,9 +56,7 @@ class App extends Component {
       : this.setState({ category: event.target.id });
     document.getElementsByClassName("spinner")[0].style.display="none";
   }, 500);
-  this.setState({
-    currentPage: "filtered",
-  })
+
   };
 
   PriceSort = (event) => {
@@ -356,7 +354,7 @@ componentDidMount() {
             ""
           )}
 
-          {this.state.currentPage == "home" || this.state.currentPage == "filtered" ? (
+          {this.state.currentPage == "home" ? (
             <Buttons
               ChooseCategory={this.ChooseCategory}
               PriceSort={this.PriceSort}
@@ -367,7 +365,7 @@ componentDidMount() {
             ""
           )}
 
-          {this.state.currentPage == "home" || this.state.currentPage == "filtered" ? (
+          {this.state.currentPage == "home" ? (
             <ItemList
               StateData={this.state}
               ClickProduct={this.ClickProduct}
@@ -418,7 +416,7 @@ componentDidMount() {
             ""
           )}
 
-          {this.state.currentPage == "home" || this.state.currentPage == "filtered" ? (
+          {this.state.currentPage == "home" ? (
             <NewsletterBar />
           ) : (
             ""

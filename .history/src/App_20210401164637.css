@@ -198,7 +198,7 @@ h3 {
   float: left;
   transition: 2s;
   cursor: pointer;
-  outline: 3px solid rgb(201, 0, 219);
+  outline: 2px solid rgb(0, 0, 0);
 }
 
 .bar-container {
@@ -208,7 +208,8 @@ h3 {
   left: 2.5%;
   margin-top: 2%;
   margin-bottom: 2%;
-  background-color: rgba(202, 202, 202, 1);
+  background-color: rgb(201, 0, 219);
+  outline: 3px solid rgb(201, 0, 219);
   box-shadow: 5px 5px 10px rgb(100, 100, 100);
 }
 
@@ -257,7 +258,7 @@ h3 {
   display: inline-block;
   transition: 2s;
   cursor: pointer;
-  outline: 3px solid rgb(201, 0, 219);
+  outline: 2px solid rgb(0, 0, 0);
 }
 
 .bar-small:hover {

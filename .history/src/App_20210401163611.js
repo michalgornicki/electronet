@@ -356,7 +356,7 @@ componentDidMount() {
             ""
           )}
 
-          {this.state.currentPage == "home" || this.state.currentPage == "filtered" ? (
+          {this.state.currentPage == "home" || this.state.currentPage == "filtered" || ? (
             <Buttons
               ChooseCategory={this.ChooseCategory}
               PriceSort={this.PriceSort}
@@ -367,7 +367,7 @@ componentDidMount() {
             ""
           )}
 
-          {this.state.currentPage == "home" || this.state.currentPage == "filtered" ? (
+          {this.state.currentPage == "home" ? (
             <ItemList
               StateData={this.state}
               ClickProduct={this.ClickProduct}
@@ -418,7 +418,7 @@ componentDidMount() {
             ""
           )}
 
-          {this.state.currentPage == "home" || this.state.currentPage == "filtered" ? (
+          {this.state.currentPage == "home" ? (
             <NewsletterBar />
           ) : (
             ""
