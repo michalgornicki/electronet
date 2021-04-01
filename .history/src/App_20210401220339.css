@@ -2,7 +2,6 @@
 
 body {
   background-color: rgb(255, 255, 255);
-  scroll-behavior: smooth;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
@@ -37,10 +36,6 @@ body {
   width: 8vmin;
 }
 
-.up:hover{
-  filter:brightness(0.5);
-}
-
 .main-header {
   position: relative;
   text-align: left;
@@ -58,12 +53,13 @@ body {
   width:fit-content;
   float: left;
   font-size: 5vmin;
+  background-color:aquamarine;
   color: rgb(201, 0, 219);
   letter-spacing: 0;
   font-weight: 900;
   height: 10vmin;
   line-height: 10vmin;
-  margin-left: 4vmin;
+  padding-left: 4vmin;
   padding-right: 1vmin;
 }
 
