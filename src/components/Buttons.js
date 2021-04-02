@@ -63,9 +63,15 @@ const Buttons = (props) => {
             }}
           />
         </div>
+      {parseFloat(window.screen.width) < 800 ? <div className="items-number-in-row" onClick={props.oneItemRow}>1</div> : ""}
+      {parseFloat(window.screen.width) < 800 ? <div className="items-number-in-row" onClick={props.twoItemRow}>2</div> : ""}
+      <div className="items-number-in-row" onClick={props.threeItemRow}>3</div>
+      {parseFloat(window.screen.width) > 800 ? <div className="items-number-in-row" onClick={props.fourItemRow}>4</div> : ""}
+      {parseFloat(window.screen.width) > 800 ? <div className="items-number-in-row" onClick={props.fiveItemRow}>5</div> : ""}
+      {parseFloat(window.screen.width) > 800 ? <div className="items-number-in-row" onClick={props.sixItemRow}>6</div> : ""}
       
-      <div className="one-item-in-row">one item</div>
-      <div className="two-items-in-row">two items</div>
+      
+      
 
       </div>
     </div>

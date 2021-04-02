@@ -333,6 +333,43 @@ componentDidMount() {
     });
   };
 
+  oneItemRow = (event) => {
+    var items = document.querySelectorAll(".item")
+    for (var x = 0; x < items.length; x++)
+    items[x].style.width="95%";
+
+  }
+
+  twoItemRow = (event) => {
+    var items = document.querySelectorAll(".item")
+    for (var x = 0; x < items.length; x++)
+    items[x].style.width="45%";
+  }
+
+  threeItemRow = (event) => {
+    var items = document.querySelectorAll(".item")
+    for (var x = 0; x < items.length; x++)
+    items[x].style.width="30%";
+  }
+
+  fourItemRow = (event) => {
+    var items = document.querySelectorAll(".item")
+    for (var x = 0; x < items.length; x++)
+    items[x].style.width="23%";
+  }
+
+  fiveItemRow = (event) => {
+    var items = document.querySelectorAll(".item")
+    for (var x = 0; x < items.length; x++)
+    items[x].style.width="18%";
+  }
+
+  sixItemRow = (event) => {
+    var items = document.querySelectorAll(".item")
+    for (var x = 0; x < items.length; x++)
+    items[x].style.width="15%";
+  }
+
   render() {
     return (
       <div className="App">
@@ -362,6 +399,12 @@ componentDidMount() {
               PriceSort={this.PriceSort}
               setMinPrice={this.setMinPrice}
               setMaxPrice={this.setMaxPrice}
+              oneItemRow={this.oneItemRow}
+              twoItemRow={this.twoItemRow}
+              threeItemRow={this.threeItemRow}
+              fourItemRow={this.fourItemRow}
+              fiveItemRow={this.fiveItemRow}
+              sixItemRow={this.sixItemRow}
             />
           ) : (
             ""
