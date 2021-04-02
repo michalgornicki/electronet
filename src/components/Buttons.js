@@ -63,6 +63,10 @@ const Buttons = (props) => {
             }}
           />
         </div>
+      
+      <div className="one-item-in-row">one item</div>
+      <div className="two-items-in-row">two items</div>
+
       </div>
     </div>
   );

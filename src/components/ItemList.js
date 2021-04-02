@@ -28,7 +28,7 @@ const ItemList = (props) => {
         .map((product) => {
           return (
             <div className="item" key={data.id}>
-              <img className="item-image" src={product.image} alt="" onClick={props.ClickProduct} />
+              <img className="item-image" src={product.image} alt="" onClick={props.ClickProduct} loading="lazy"/>
               <h1 className="title" onClick={props.ClickProduct}>
                 {product.title}
               </h1>
