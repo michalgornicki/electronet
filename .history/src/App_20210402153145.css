@@ -1137,7 +1137,7 @@ button{
   h1 {
     font-size: 3.5vmin;
     font-weight: 500;
-    margin-bottom: 8vmin;
+    margin-bottom: 6vmin;
   }
 
   h2 {
@@ -1150,6 +1150,7 @@ button{
     font-size: 4vmin;
     font-weight: 500;
     color: rgb(145, 145, 145);
+    top: 3vmin;
   }
 
   .add-to-cart {
@@ -1361,10 +1362,6 @@ button{
 
 .items-number-in-row:hover{
   background-color: rgb(192, 192, 192);
-}
-
-.basket-item-summary{
-  width: 90%;
 }
 
 }
