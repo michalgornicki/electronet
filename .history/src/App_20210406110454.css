@@ -413,7 +413,7 @@ h3 {
 .buttons-container {
   position: relative;
   display: inline-block;
-  width: 90%;
+  width: 80%;
   background-color: rgb(255, 255, 255);
   margin-top: 2vmin;
 }
@@ -935,21 +935,6 @@ button{
   font-size: 3vmin;
 }
 
-.basket-value-summary {
-  position: relative;
-  width: 65%;
-  height: 6vmin;
-  line-height: 6vmin;
-  left: 5%;
-  background-color: rgb(0, 230, 50);
-  font-size: 3vmin;
-}
-
-.order-confirmation{
-  transition: 1s;
-  filter: opacity(0);
-}
-
 .basket-items{
   width: 80%;
   left: 0%;
@@ -971,21 +956,6 @@ button{
 
 .items-number-in-row:hover{
   background-color: black;
-}
-
-.summary-cart {
-  position: relative;
-  user-select: none;
-  background-color: rgb(245, 245, 245);
-  width: 98%;
-  left: 1%;
-  margin-top: 2vmin;
-  margin-bottom: 2vmin;
-  height: fit-content;
-  padding-bottom: 200px;
-  box-shadow: 0px 0px 15px rgb(134, 134, 134);
-  animation: 1s;
-  border-radius: 5vmin;
 }
 
 @media only screen and (max-width: 800px) {
@@ -1066,7 +1036,7 @@ button{
 
   .item {
     background-color: rgb(255, 255, 255);
-    width: 47%;
+    width: 45%;
     box-shadow: 0px 0px 5px rgb(160, 160, 160);
   }
 
@@ -1370,16 +1340,6 @@ button{
 }
 
 .basket-value {
-  position: relative;
-  width: 100%;
-  height: 8vmin;
-  line-height: 8vmin;
-  left: 0%;
-  background-color: rgb(0, 230, 50);
-  font-size: 5vmin;
-}
-
-.basket-value-summary {
   position: relative;
   width: 100%;
   height: 8vmin;

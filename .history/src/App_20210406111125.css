@@ -945,11 +945,6 @@ button{
   font-size: 3vmin;
 }
 
-.order-confirmation{
-  transition: 1s;
-  filter: opacity(0);
-}
-
 .basket-items{
   width: 80%;
   left: 0%;
@@ -971,21 +966,6 @@ button{
 
 .items-number-in-row:hover{
   background-color: black;
-}
-
-.summary-cart {
-  position: relative;
-  user-select: none;
-  background-color: rgb(245, 245, 245);
-  width: 98%;
-  left: 1%;
-  margin-top: 2vmin;
-  margin-bottom: 2vmin;
-  height: fit-content;
-  padding-bottom: 200px;
-  box-shadow: 0px 0px 15px rgb(134, 134, 134);
-  animation: 1s;
-  border-radius: 5vmin;
 }
 
 @media only screen and (max-width: 800px) {
@@ -1381,7 +1361,7 @@ button{
 
 .basket-value-summary {
   position: relative;
-  width: 100%;
+  width: 65%;
   height: 8vmin;
   line-height: 8vmin;
   left: 0%;

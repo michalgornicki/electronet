@@ -305,13 +305,9 @@ componentDidMount() {
     const error = document.getElementsByClassName("delivery-error");
 
     if (
-      error[0].innerHTML.length == 1 &&
-      error[1].innerHTML.length == 1 &&
-      error[2].innerHTML.length == 1 &&
-      error[3].innerHTML.length == 1 &&
-      error[4].innerHTML.length == 1 &&
-      error[5].innerHTML.length == 1 &&
-      error[6].innerHTML.length == 1
+      this.setState({
+        currentPage: "summary",
+      })
     ) {
       this.setState({
         currentPage: "summary",

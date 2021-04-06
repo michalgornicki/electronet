@@ -979,12 +979,8 @@ button{
   background-color: rgb(245, 245, 245);
   width: 98%;
   left: 1%;
-  margin-top: 2vmin;
-  margin-bottom: 2vmin;
-  height: fit-content;
-  padding-bottom: 200px;
+  padding-bottom: 500px;
   box-shadow: 0px 0px 15px rgb(134, 134, 134);
-  animation: 1s;
   border-radius: 5vmin;
 }
 

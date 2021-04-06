@@ -148,7 +148,7 @@ class App extends Component {
     });
   };
 
-  cartBackToBasket = (event) => {
+  cartBack = (event) => {
     window.scrollTo(0, 0);
     this.setState({
       currentPage: "basket",
@@ -305,13 +305,9 @@ componentDidMount() {
     const error = document.getElementsByClassName("delivery-error");
 
     if (
-      error[0].innerHTML.length == 1 &&
-      error[1].innerHTML.length == 1 &&
-      error[2].innerHTML.length == 1 &&
-      error[3].innerHTML.length == 1 &&
-      error[4].innerHTML.length == 1 &&
-      error[5].innerHTML.length == 1 &&
-      error[6].innerHTML.length == 1
+      this.setState({
+        currentPage: "summary",
+      })
     ) {
       this.setState({
         currentPage: "summary",
@@ -326,12 +322,9 @@ componentDidMount() {
     document.getElementsByClassName("basket-value-summary")[0].style.filter = "opacity(0)";
     document.getElementsByClassName("delivery-selection-info")[0].style.filter = "opacity(0)";
     document.getElementsByClassName("order-confirmation")[0].style.filter = "opacity(1)";
-    document.getElementsByClassName("order-proceed")[0].style.display = "none";
-    document.getElementsByClassName("cart-close")[1].innerHTML = "Kontynuuj zakupy";
-    document.getElementsByClassName("cart-close")[1].style.left = "50%";
-
-    document.getElementsByClassName("cart-close")[1].onclick = this.cartClose;
-
+    document.getElementsByClassName("cart-proceed")[0].display = "none";
+    document.getElementsByClassName("cart-close")[0].innerHTML = "Kontynuuj zakupy";
+    
 
     this.setState({
       myBasket: [],
@@ -446,7 +439,7 @@ componentDidMount() {
           {this.state.currentPage == "delivery" ? (
             <DeliveryCart
               StateData={this.state}
-              cartBackToBasket={this.cartBackToBasket}
+              cartBack={this.cartBack}
               orderSummary={this.orderSummary}
               formValidation={this.formValidation}
               selectCourier={this.selectCourier}
@@ -460,7 +453,7 @@ componentDidMount() {
           {this.state.currentPage == "summary" ? (
             <SummaryCart
               StateData={this.state}
-              cartBackToBasket={this.cartBackToBasket}
+              cartBack={this.cartBack}
               orderAccept={this.orderAccept}
             />
           ) : (

@@ -148,7 +148,7 @@ class App extends Component {
     });
   };
 
-  cartBackToBasket = (event) => {
+  cartBack = (event) => {
     window.scrollTo(0, 0);
     this.setState({
       currentPage: "basket",
@@ -323,19 +323,12 @@ componentDidMount() {
 
   orderAccept = (event) => {
     window.scrollTo(0, 0);
-    document.getElementsByClassName("basket-value-summary")[0].style.filter = "opacity(0)";
-    document.getElementsByClassName("delivery-selection-info")[0].style.filter = "opacity(0)";
-    document.getElementsByClassName("order-confirmation")[0].style.filter = "opacity(1)";
-    document.getElementsByClassName("order-proceed")[0].style.display = "none";
-    document.getElementsByClassName("cart-close")[1].innerHTML = "Kontynuuj zakupy";
-    document.getElementsByClassName("cart-close")[1].style.left = "50%";
-
-    document.getElementsByClassName("cart-close")[1].onclick = this.cartClose;
-
+    document.getElementsByClassName("basket-items")[0].innerHTML = "none";
 
     this.setState({
       myBasket: [],
       basketItems: 0,
+      currentPage: "home",
     });
   };
 
@@ -446,7 +439,7 @@ componentDidMount() {
           {this.state.currentPage == "delivery" ? (
             <DeliveryCart
               StateData={this.state}
-              cartBackToBasket={this.cartBackToBasket}
+              cartBack={this.cartBack}
               orderSummary={this.orderSummary}
               formValidation={this.formValidation}
               selectCourier={this.selectCourier}
@@ -460,7 +453,7 @@ componentDidMount() {
           {this.state.currentPage == "summary" ? (
             <SummaryCart
               StateData={this.state}
-              cartBackToBasket={this.cartBackToBasket}
+              cartBack={this.cartBack}
               orderAccept={this.orderAccept}
             />
           ) : (

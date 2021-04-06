@@ -43,7 +43,7 @@ const SummaryCart = (props) => {
       </h1>
 
       <div>
-        <div className="cart-close" onClick={props.cartBackToBasket}>
+        <div className="cart-close" onClick={props.cartBack}>
           Wróć
         </div>
       </div>

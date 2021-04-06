@@ -39,11 +39,11 @@ const SummaryCart = (props) => {
       </h1>
 
       <h1 className="order-confirmation">
-        Dziękujemy za zakupy! Potwierdzenie zamówienia znajdziesz na swojej skrzynce e-mail.
+      Dziękujemy za zakupy! Potwierdzenie zamówienia znajdziesz na swojej skrzynce e-mail.
       </h1>
 
       <div>
-        <div className="cart-close" onClick={props.cartBackToBasket}>
+        <div className="cart-close" onClick={props.cartBack}>
           Wróć
         </div>
       </div>
